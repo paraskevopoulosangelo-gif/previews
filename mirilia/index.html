@@ -131,6 +131,10 @@ h2 em{font-style:italic;color:var(--stone-d)}
 /* location */
 .loc{background:var(--sand)}
 .loc-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
+.addr{display:flex;gap:14px;align-items:flex-start;margin-top:28px}
+.addr svg{width:24px;height:24px;stroke:var(--stone-d);fill:none;stroke-width:1.5;flex:none;margin-top:2px}
+.addr b{display:block;font-weight:600;font-size:15.5px}
+.addr a{font-size:13.5px;color:var(--stone-d)}
 .dist{margin-top:34px}
 .dist .dist-h{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-d);border-bottom:1px solid #d3c9bb;padding:0 0 10px}
 .dist div{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #d3c9bb;font-size:15.5px}
@@ -390,6 +394,11 @@ footer a:hover{color:#fff}
       <div class="kicker"><span class="el">Τοποθεσία</span><span class="en">Location</span><span class="fr">Emplacement</span><span class="it">Posizione</span><span class="de">Lage</span></div>
       <h2><span class="el">Ήσυχα, αλλά<br><em>δίπλα σε όλα</em></span><span class="en">Quiet, yet<br><em>close to everything</em></span><span class="fr">Au calme,<br><em>mais près de tout</em></span><span class="it">Tranquilla,<br><em>ma vicina a tutto</em></span><span class="de">Ruhig,<br><em>und doch nah an allem</em></span></h2>
       <p class="lead"><span class="el">Στα Τάλαντα, μια ήσυχη αγροτική και οικιστική περιοχή ακριβώς στην «πόρτα» της Ερμούπολης. Ηρεμία για ύπνο και ξεκούραση, με την πόλη, το λιμάνι και τις παραλίες λίγα λεπτά μακριά.</span><span class="en">In Talanta, a quiet rural and residential area right at the doorstep of Ermoupoli. Peace for sleep and rest, with the town, the port and the beaches just minutes away.</span><span class="fr">À Talanta, un quartier résidentiel et campagnard paisible, juste aux portes d’Ermoupoli. Le calme pour dormir et se reposer, avec la ville, le port et les plages à quelques minutes.</span><span class="it">A Talanta, una zona tranquilla, rurale e residenziale, proprio alle porte di Ermoupoli. Pace per dormire e riposare, con la città, il porto e le spiagge a pochi minuti.</span><span class="de">In Talanta, einer ruhigen ländlichen Wohngegend direkt vor den Toren von Ermoupoli. Ruhe zum Schlafen und Erholen, mit Stadt, Hafen und Stränden nur wenige Minuten entfernt.</span></p>
+      <div class="addr">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <div><b><span class="el">Κουντουριώτου 29, 841 00 Ερμούπολη, Σύρος</span><span class="en">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="fr">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="it">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="de">Kountourioti 29, 841 00 Ermoupoli, Syros</span></b>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%CE%9A%CE%BF%CF%85%CE%BD%CF%84%CE%BF%CF%85%CF%81%CE%B9%CF%8E%CF%84%CE%BF%CF%85%2029%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%20841%2000" target="_blank" rel="noopener"><span class="el">Οδηγίες στο Google Maps →</span><span class="en">Directions on Google Maps →</span><span class="fr">Itinéraire sur Google Maps →</span><span class="it">Indicazioni su Google Maps →</span><span class="de">Route in Google Maps →</span></a></div>
+      </div>
       <div class="dist">
         <div class="dist-h"><span class="el">Αποστάσεις με αυτοκίνητο</span><span class="en">Distances by car</span><span class="fr">Distances en voiture</span><span class="it">Distanze in auto</span><span class="de">Entfernungen mit dem Auto</span></div>
         <div><span class="el">Πλατεία Μιαούλη, κέντρο Ερμούπολης</span><span class="en">Miaouli Square, Ermoupoli centre</span><span class="fr">Place Miaouli, centre d’Ermoupoli</span><span class="it">Piazza Miaouli, centro di Ermoupoli</span><span class="de">Miaouli-Platz, Zentrum von Ermoupoli</span><b>5–7′</b></div>
@@ -399,7 +408,7 @@ footer a:hover{color:#fff}
       </div>
     </div>
     <div class="map reveal">
-      <iframe title="Χάρτης" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%CE%A4%CE%AC%CE%BB%CE%B1%CE%BD%CF%84%CE%B1%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%2C%20%CE%A3%CF%8D%CF%81%CE%BF%CF%82&z=14&output=embed"></iframe>
+      <iframe title="Χάρτης" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%CE%9A%CE%BF%CF%85%CE%BD%CF%84%CE%BF%CF%85%CF%81%CE%B9%CF%8E%CF%84%CE%BF%CF%85%2029%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%20841%2000&z=15&output=embed"></iframe>
     </div>
   </div>
 </section>
@@ -488,7 +497,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="legal">
       <span><span class="el">Αρ. Μητρώου Ακινήτου Βραχυχρόνιας Διαμονής (ΑΜΑ):</span><span class="en">Short-term rental registry no. (AMA):</span><span class="fr">N° d'enregistrement location courte durée (AMA) :</span><span class="it">N. registro affitti brevi (AMA):</span><span class="de">Registriernummer Kurzzeitvermietung (AMA):</span> 00003881066</span>
-      <span>© 2026 Mirilia Stone House · <span class="el">Τάλαντα, Ερμούπολη, Σύρος</span><span class="en">Talanta, Ermoupoli, Syros</span><span class="fr">Talanta, Ermoupoli, Syros</span><span class="it">Talanta, Ermoupoli, Syros</span><span class="de">Talanta, Ermoupoli, Syros</span></span>
+      <span>© 2026 Mirilia Stone House · <span class="el">Κουντουριώτου 29, 841 00 Ερμούπολη, Σύρος</span><span class="en">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="fr">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="it">Kountourioti 29, 841 00 Ermoupoli, Syros</span><span class="de">Kountourioti 29, 841 00 Ermoupoli, Syros</span></span>
     </div>
   </div>
 </footer>
