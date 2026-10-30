@@ -139,8 +139,8 @@ h2 em{font-style:italic;color:var(--stone-d)}
 .dist .dist-h{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-d);border-bottom:1px solid #d3c9bb;padding:0 0 10px}
 .dist div{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #d3c9bb;font-size:15.5px}
 .dist b{font-family:var(--serif);font-size:20px;font-weight:500}
-.map{border-radius:var(--r);overflow:hidden;aspect-ratio:5/4;background:#d8cfc3;position:relative}
-.map iframe{width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05)}
+.map{border-radius:10px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 14px 40px rgba(0,0,0,.08);background:#d8cfc3;position:relative}
+.map iframe{width:100%;height:100%;border:0}
 
 /* reviews */
 .rev{text-align:center}
@@ -407,8 +407,11 @@ footer a:hover{color:#fff}
         <div><span class="el">Παραλίες Γαλησσά &amp; Κινίου</span><span class="en">Galissas &amp; Kini beaches</span><span class="fr">Plages de Galissas &amp; Kini</span><span class="it">Spiagge di Galissas &amp; Kini</span><span class="de">Strände Galissas &amp; Kini</span><b>12–15′</b></div>
       </div>
     </div>
-    <div class="map reveal">
-      <iframe title="Χάρτης" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%CE%9A%CE%BF%CF%85%CE%BD%CF%84%CE%BF%CF%85%CF%81%CE%B9%CF%8E%CF%84%CE%BF%CF%85%2029%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%20841%2000&z=15&output=embed"></iframe>
+    <div class="reveal">
+      <div class="map">
+        <iframe title="Google Maps: Mirilia Stone House" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=%CE%9A%CE%BF%CF%85%CE%BD%CF%84%CE%BF%CF%85%CF%81%CE%B9%CF%8E%CF%84%CE%BF%CF%85%2029%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%20841%2000&amp;hl=el&amp;z=15&amp;output=embed"></iframe>
+      </div>
+      <a class="btn" style="margin-top:18px" href="https://www.google.com/maps/search/?api=1&amp;query=%CE%9A%CE%BF%CF%85%CE%BD%CF%84%CE%BF%CF%85%CF%81%CE%B9%CF%8E%CF%84%CE%BF%CF%85%2029%2C%20%CE%95%CF%81%CE%BC%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7%20841%2000" target="_blank" rel="noopener"><span class="el">Άνοιγμα στο Google Maps</span><span class="en">Open in Google Maps</span><span class="fr">Ouvrir dans Google Maps</span><span class="it">Apri in Google Maps</span><span class="de">In Google Maps öffnen</span></a>
     </div>
   </div>
 </section>
