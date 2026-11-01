@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endymion · Χειροποίητα στρώματα εδώ και 40 χρόνια</title>
+<meta name="description" content="Χειροποίητα στρώματα από φυσικά υλικά, φτιαγμένα στο εργαστήριό μας εδώ και 40 χρόνια. Ειδικές διαστάσεις, άτοκες δόσεις, δοκιμή στο showroom. Και η βρεφική σειρά Bebestrom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;1,300&family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#16213a; --night2:#1f2d4b; --gold:#c9a96a; --gold-d:#a8884a; --cream:#f7f2e9; --paper:#fbf9f5;
+  --ink:#1b1d24; --muted:#5f6370; --line:#e6e1d7; --white:#fff; --ok:#2f7a4f;
+  --baby:#eaf2f8; --baby-d:#4f7fa8;
+  --serif:"Noto Serif Display",Georgia,serif; --sans:"Commissioner",system-ui,-apple-system,sans-serif;
+  --max:1200px; --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.005em}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--night)}
+.btn-gold:hover{background:#d8bb80}
+.btn-line{border:1.5px solid currentColor}
+.btn-dark{background:var(--night);color:#fff}
+.btn-dark:hover{background:var(--night2)}
+.demo{background:#fff6dc;color:#6b5418;font-size:12px;text-align:center;padding:6px 12px}
+
+/* announcement + header */
+.ann{background:var(--night);color:#e9dfc9;font-size:13px;overflow:hidden}
+.ann .wrap{display:flex;justify-content:center;gap:28px;padding:9px 20px;white-space:nowrap}
+.ann span:not(:first-child){display:none}
+header.site{position:sticky;top:0;z-index:40;background:rgba(251,249,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-size:22px;letter-spacing:.16em;display:flex;align-items:center;gap:8px}
+.logo svg{width:22px;height:22px}
+.mainnav{display:none;gap:26px;font-size:15px}
+.mainnav a:hover{color:var(--gold-d)}
+.mainnav .bb{color:var(--baby-d);font-weight:600}
+.icons{display:flex;gap:4px}
+.icons a,.icons button{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;position:relative}
+.icons svg{width:22px;height:22px}
+.badge{position:absolute;top:6px;right:5px;background:var(--gold);color:var(--night);font-size:11px;font-weight:700;border-radius:999px;min-width:18px;height:18px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.burger{display:flex}
+@media(min-width:980px){.mainnav{display:flex}.burger{display:none!important}.ann span:not(:first-child){display:inline}}
+
+/* mobile menu */
+.mnav{position:fixed;inset:0;z-index:60;background:var(--paper);transform:translateX(-100%);transition:.3s;padding:20px;overflow:auto}
+.mnav.open{transform:none}
+.mnav .x{width:44px;height:44px;font-size:28px;margin-left:auto;display:block}
+.mnav a{display:block;font-family:var(--serif);font-size:28px;padding:12px 0;border-bottom:1px solid var(--line)}
+.mnav a.bb{color:var(--baby-d)}
+
+/* sections */
+section{padding:72px 0}
+.sec-h{font-size:clamp(30px,5vw,48px);margin:10px 0 14px}
+.lead{color:var(--muted);max-width:640px;font-size:17px}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+/* product cards */
+.grid3{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:700px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(22,33,58,.35)}
+.card .pic{aspect-ratio:4/3;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px;position:relative}
+.card .tag{position:absolute;top:14px;left:14px;font-size:12px;font-weight:600;background:var(--night);color:#fff;padding:5px 10px;border-radius:999px}
+.card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:26px}
+.card .desc{color:var(--muted);font-size:14px}
+.firm{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.firm .bar{flex:1;max-width:120px;height:6px;border-radius:9px;background:#ece6da;position:relative}
+.firm .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:9px;background:var(--gold)}
+.price{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:8px}
+.price b{font-size:22px}
+.price small{color:var(--muted);font-size:13px}
+.inst{font-size:13px;color:var(--ok);font-weight:500}
+
+/* HOME */
+.hero{background:radial-gradient(120% 90% at 80% 10%,#2a3a60 0%,var(--night) 55%,#0f1729 100%);color:#efe7d6;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:24px;padding-top:48px;padding-bottom:56px;align-items:center}
+.hero h1{font-size:clamp(38px,7.4vw,72px);color:#fff}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--gold)}
+.hero p{font-size:18px;opacity:.85;max-width:520px;margin:18px 0 28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ctas .btn-line{color:#efe7d6}
+.hero .art{position:relative}
+.hero .moon{position:absolute;right:6%;top:-6%;width:90px;opacity:.9}
+.stars i{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.6}
+.hero .proof{display:flex;gap:22px;margin-top:30px;font-size:13px;opacity:.8;flex-wrap:wrap}
+.hero .proof b{display:block;font-family:var(--serif);font-size:26px;font-weight:400;color:var(--gold);opacity:1}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr;padding-top:80px;padding-bottom:90px}}
+
+.trust{background:var(--white);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:22px;padding-bottom:22px}
+.trust div{display:flex;gap:12px;align-items:center;font-size:14px}
+.trust svg{width:30px;height:30px;flex:none;color:var(--gold-d)}
+.trust b{display:block;font-size:15px}
+.trust span{color:var(--muted);font-size:13px}
+@media(min-width:900px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
+
+/* quiz */
+.quiz{background:var(--cream)}
+.qbox{max-width:760px;margin:32px auto 0;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:28px 22px;box-shadow:0 30px 60px -40px rgba(22,33,58,.4)}
+.qprog{height:4px;background:#efe9de;border-radius:9px;overflow:hidden;margin-bottom:22px}
+.qprog i{display:block;height:100%;background:var(--gold);width:0;transition:.35s}
+.qstep{font-size:13px;color:var(--muted);margin-bottom:6px}
+.qq{font-family:var(--serif);font-size:clamp(24px,4vw,32px);margin-bottom:20px}
+.qopts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qopts button{border:1.5px solid var(--line);border-radius:14px;padding:16px 14px;text-align:left;min-height:64px;font-size:15px;transition:.15s;background:var(--paper)}
+.qopts button:hover{border-color:var(--gold);background:#fffaf0}
+.qopts button small{display:block;color:var(--muted);font-size:12px}
+.qres{display:none;text-align:center}
+.qres .mt{max-width:320px;margin:0 auto}
+.qres h3{font-size:36px;margin:6px 0}
+.qres p{color:var(--muted);max-width:480px;margin:0 auto 18px}
+.qres .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.qback{margin-top:16px;font-size:14px;color:var(--muted);text-decoration:underline}
+
+/* custom size */
+.custom{display:grid;gap:30px;align-items:center}
+.custom .vis{background:var(--night);border-radius:22px;padding:30px;color:#efe7d6;position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+.dim{position:relative;border:2px dashed var(--gold);border-radius:8px;height:240px;width:auto;max-width:75%;aspect-ratio:160/200;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:28px;transition:.3s}
+.dim .wlab,.dim .hlab{position:absolute;font-family:var(--sans);font-size:13px;color:var(--gold)}
+.dim .wlab{top:-26px;left:0;right:0;text-align:center}
+.dim .hlab{right:-58px;top:50%;transform:translateY(-50%)}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 14px}
+.calc label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.calc input,.calc select{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);min-height:48px}
+.calc .full{grid-column:1/-1}
+.cprice{font-size:15px;color:var(--muted)}
+.cprice b{font-size:26px;color:var(--ink);font-family:var(--serif);font-weight:400}
+.ul{list-style:none;margin:14px 0 22px}
+.ul li{padding-left:28px;position:relative;margin-bottom:8px}
+.ul li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:2px solid var(--gold-d);border-bottom:2px solid var(--gold-d);transform:rotate(-45deg)}
+@media(min-width:900px){.custom{grid-template-columns:1fr 1fr;gap:60px}}
+
+/* layers */
+.layers{background:var(--night);color:#efe7d6}
+.layers .lead{color:#c8c1b2}
+.lgrid{display:grid;gap:26px;align-items:center;margin-top:30px}
+.lyr{cursor:pointer;transition:transform .25s}
+.lyr:hover,.lyr.on,.lyr:focus{transform:translateX(10px);outline:none}
+.lyr.on polygon{stroke:var(--gold);stroke-width:1.5}
+.linfo{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:24px}
+.linfo h3{font-size:30px;color:#fff;margin-bottom:8px}
+.linfo p{color:#d3ccbd}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{font-size:12px;border:1px solid rgba(201,169,106,.5);color:var(--gold);padding:5px 10px;border-radius:999px}
+.ltabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.ltabs button{font-size:13px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);min-height:40px}
+.ltabs button.on{background:var(--gold);color:var(--night);border-color:var(--gold)}
+@media(min-width:900px){.lgrid{grid-template-columns:1.1fr 1fr}}
+
+/* bebestrom */
+.bebe{background:var(--baby)}
+.bebe .eyebrow{color:var(--baby-d)}
+.bebe-top{display:grid;gap:20px;align-items:end;margin-bottom:30px}
+.bebe-logo{font-family:var(--serif);font-size:clamp(40px,7vw,64px);color:#2f5a80;line-height:1}
+.bebe-logo small{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--baby-d);margin-top:8px}
+.bebe .card{border-color:#d4e3ef}
+.bebe .card .pic{background:#e4eef6}
+.bebe .card .tag{background:var(--baby-d)}
+.bebe .btn-dark{background:#2f5a80}
+.safe{display:grid;gap:12px;margin-top:26px;grid-template-columns:1fr}
+.safe div{background:#fff;border-radius:14px;padding:16px 18px;font-size:14px;border:1px solid #d4e3ef}
+.safe b{display:block;color:#2f5a80}
+@media(min-width:900px){.bebe-top{grid-template-columns:1fr auto}.safe{grid-template-columns:repeat(3,1fr)}}
+
+/* story */
+.story{display:grid;gap:34px;align-items:center}
+.story .ill{background:var(--cream);border-radius:22px;padding:30px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.tl{margin-top:24px;border-left:2px solid var(--line);padding-left:20px}
+.tl div{position:relative;margin-bottom:18px}
+.tl div::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.tl b{display:block;font-family:var(--serif);font-weight:400;font-size:20px}
+.tl span{color:var(--muted);font-size:14px}
+@media(min-width:900px){.story{grid-template-columns:1fr 1fr;gap:70px}}
+
+/* showroom */
+.show{background:var(--white);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid}
+.show .map{background:linear-gradient(135deg,#e9e4d9,#f4f0e8);min-height:240px;position:relative}
+.show .map svg{position:absolute;inset:0;width:100%;height:100%}
+.show .txt{padding:30px 24px}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.slots button{border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;min-height:44px}
+.slots button.on{border-color:var(--night);background:var(--night);color:#fff}
+@media(min-width:900px){.show{grid-template-columns:1fr 1fr}.show .txt{padding:44px}}
+
+/* faq */
+.faq{max-width:820px;margin:30px auto 0}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;font-size:17px;font-weight:500;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--gold-d);transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);padding:0 0 18px}
+
+/* newsletter + footer */
+.news{background:var(--cream);text-align:center}
+.news form{display:flex;gap:10px;max-width:480px;margin:22px auto 0;flex-wrap:wrap;justify-content:center}
+.news input{flex:1;min-width:220px;font:inherit;padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);min-height:50px}
+footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 30px}
+.fgrid{display:grid;gap:30px;grid-template-columns:1fr 1fr}
+.fgrid h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;font-weight:600}
+.fgrid a{display:block;padding:5px 0;color:#cfc7b6}
+.fgrid a:hover{color:var(--gold)}
+.fbrand{grid-column:1/-1}
+.fbrand .logo{color:#fff;margin-bottom:10px}
+.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;font-size:12px;color:#9a9384;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.pay{display:flex;gap:6px;flex-wrap:wrap}
+.pay span{border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:3px 8px;font-size:11px}
+@media(min-width:900px){.fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr}.fbrand{grid-column:auto}}
+
+/* cart toast */
+.toast{visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);background:var(--night);color:#fff;padding:14px 20px;border-radius:14px;font-size:14px;z-index:80;transition:.3s;display:flex;gap:14px;align-items:center;box-shadow:0 20px 40px -20px #000}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+.toast a{color:var(--gold);font-weight:600}
+</style>
+</head>
+<body>
+<div class="demo">Δείγμα σχεδίου · Το όνομα, οι τιμές και τα κείμενα είναι ενδεικτικά</div>
+<div class="ann"><div class="wrap"><span>Δωρεάν παράδοση σε όλη την Ελλάδα</span><span>·</span><span>Έως 36 άτοκες δόσεις</span><span>·</span><span>Ειδικές διαστάσεις χωρίς χρέωση</span></div></div>
+
+<header class="site">
+  <div class="wrap">
+    <button class="burger icons" aria-label="Μενού" onclick="document.querySelector('.mnav').classList.add('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="24" height="24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="index.html" class="logo" aria-label="Endymion αρχική"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3a9 9 0 1 0 6 15.4A9.8 9.8 0 0 1 15 3Z" stroke="#c9a96a" stroke-width="1.6"/></svg>ENDYMION</a>
+    <nav class="mainnav" aria-label="Κύριο μενού">
+      <a href="#stromata">Στρώματα</a>
+      <a href="#bebestrom" class="bb">Bebestrom</a>
+      <a href="#diastasi">Ειδική διάσταση</a>
+      <a href="#istoria">Η ιστορία μας</a>
+      <a href="#showroom">Showroom</a>
+    </nav>
+    <div class="icons">
+      <a href="#" aria-label="Αναζήτηση"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+      <a href="#" aria-label="Λογαριασμός" class="hide-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+      <a href="#" aria-label="Καλάθι"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="cartN">0</span></a>
+    </div>
+  </div>
+</header>
+<nav class="mnav" aria-label="Μενού κινητού">
+  <button class="x" aria-label="Κλείσιμο" onclick="this.parentNode.classList.remove('open')">×</button>
+  <a href="#stromata" onclick="closeM()">Στρώματα</a>
+  <a href="#bebestrom" class="bb" onclick="closeM()">Bebestrom</a>
+  <a href="#quiz" onclick="closeM()">Βρες το στρώμα σου</a>
+  <a href="#diastasi" onclick="closeM()">Ειδική διάσταση</a>
+  <a href="#istoria" onclick="closeM()">Η ιστορία μας</a>
+  <a href="#showroom" onclick="closeM()">Showroom</a>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="stars" aria-hidden="true"><i style="top:12%;left:8%"></i><i style="top:22%;left:46%"></i><i style="top:8%;left:62%"></i><i style="top:35%;left:90%"></i><i style="top:70%;left:4%"></i><i style="top:58%;left:52%"></i><i style="top:18%;left:28%"></i></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Οικογενειακή βιοτεχνία · 40 χρόνια</div>
+      <h1>Το στρώμα σου, <em>ραμμένο στο χέρι.</em></h1>
+      <p>Φτιάχνουμε κάθε στρώμα στο εργαστήριό μας, με κοκοφοίνικα, φυσικό latex και ελατήρια. Στη διάσταση που θέλεις, για όλη την οικογένεια.</p>
+      <div class="ctas">
+        <a href="#quiz" class="btn btn-gold">Βρες το στρώμα σου</a>
+        <a href="#stromata" class="btn btn-line">Δες τα στρώματα</a>
+      </div>
+      <div class="proof">
+        <div><b>40</b>χρόνια εμπειρία</div>
+        <div><b>100%</b>χειροποίητα</div>
+        <div><b>10</b>χρόνια εγγύηση</div>
+      </div>
+    </div>
+    <div class="art">
+      <svg class="moon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 41A26 26 0 0 1 40 8Z" fill="#c9a96a" opacity=".18" stroke="#c9a96a" stroke-width="1.5"/></svg>
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,120.7 40.0,80.7" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,88.7 130.0,120.7" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,80.7 130.0,120.7 130.0,136.8 40.0,96.8" fill="#efe2a8"/><polygon points="130.0,120.7 290.0,88.7 290.0,104.8 130.0,136.8" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,96.8 130.0,136.8 130.0,148.0 40.0,108.0" fill="#8a5a34"/><polygon points="130.0,136.8 290.0,104.8 290.0,116.0 130.0,148.0" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,108.0 130.0,148.0 130.0,164.1 40.0,124.1" fill="#efe2a8"/><polygon points="130.0,148.0 290.0,116.0 290.0,132.1 130.0,164.1" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,124.1 130.0,164.1 130.0,174.0 40.0,134.0" fill="#f4efe6"/><polygon points="130.0,164.1 290.0,132.1 290.0,142.0 130.0,174.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#fbf7ef"/><circle cx="89.2" cy="76.7" r="1.6" fill="#e7dfcf"/><circle cx="111.7" cy="86.7" r="1.6" fill="#e7dfcf"/><circle cx="134.2" cy="96.7" r="1.6" fill="#e7dfcf"/><circle cx="115.8" cy="71.3" r="1.6" fill="#e7dfcf"/><circle cx="138.3" cy="81.3" r="1.6" fill="#e7dfcf"/><circle cx="160.8" cy="91.3" r="1.6" fill="#e7dfcf"/><circle cx="142.5" cy="66.0" r="1.6" fill="#e7dfcf"/><circle cx="165.0" cy="76.0" r="1.6" fill="#e7dfcf"/><circle cx="187.5" cy="86.0" r="1.6" fill="#e7dfcf"/><circle cx="169.2" cy="60.7" r="1.6" fill="#e7dfcf"/><circle cx="191.7" cy="70.7" r="1.6" fill="#e7dfcf"/><circle cx="214.2" cy="80.7" r="1.6" fill="#e7dfcf"/><circle cx="195.8" cy="55.3" r="1.6" fill="#e7dfcf"/><circle cx="218.3" cy="65.3" r="1.6" fill="#e7dfcf"/><circle cx="240.8" cy="75.3" r="1.6" fill="#e7dfcf"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h17v13H3zM20 13h5l4 4v5h-9"/><circle cx="8" cy="24" r="2.5"/><circle cx="24" cy="24" r="2.5"/></svg><p><b>Δωρεάν παράδοση</b><span>και απόσυρση του παλιού</span></p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="M3 13h26M8 20h6"/></svg><p><b>Έως 36 άτοκες δόσεις</b><span>με όλες τις κάρτες</span></p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7Z"/><path d="m11 16 4 4 7-8"/></svg><p><b>10 χρόνια εγγύηση</b><span>από τον κατασκευαστή</span></p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 26V12l10-7 10 7v14"/><path d="M12 26v-8h8v8"/></svg><p><b>Δοκίμασέ το</b><span>στο showroom μας</span></p></div>
+  </div>
+</div>
+
+<section class="quiz" id="quiz">
+  <div class="wrap center">
+    <div class="eyebrow">2 λεπτά</div>
+    <h2 class="sec-h">Βρες το στρώμα σου</h2>
+    <p class="lead">Πέντε ερωτήσεις για το πώς κοιμάσαι. Σου προτείνουμε το στρώμα που σου ταιριάζει.</p>
+    <div class="qbox" style="text-align:left">
+      <div class="qprog"><i id="qbar"></i></div>
+      <div id="qwrap">
+        <div class="qstep" id="qstep"></div>
+        <div class="qq" id="qq"></div>
+        <div class="qopts" id="qopts"></div>
+      </div>
+      <div class="qres" id="qres">
+        <div class="eyebrow">Σου ταιριάζει</div>
+        <div class="mt" id="qmat"></div>
+        <h3 id="qname"></h3>
+        <p id="qwhy"></p>
+        <div class="row"><a href="stroma.html" class="btn btn-dark" id="qlink">Δες το στρώμα</a><a href="#showroom" class="btn btn-line">Δοκίμασέ το στο showroom</a></div>
+        <button class="qback" onclick="qStart()">Ξανά από την αρχή</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stromata">
+  <div class="wrap">
+    <div class="eyebrow">Η συλλογή</div>
+    <h2 class="sec-h">Τρία στρώματα. Ένα για κάθε σώμα.</h2>
+    <p class="lead">Κάθε μοντέλο υπάρχει σε όλες τις διαστάσεις και σε ειδική διάσταση κατά παραγγελία.</p>
+    <div class="grid3" style="margin-top:32px">
+      <a class="card" href="stroma.html">
+        <div class="pic"><span class="tag">Πιο δημοφιλές</span><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,120.7 40.0,80.7" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,88.7 130.0,120.7" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,80.7 130.0,120.7 130.0,136.8 40.0,96.8" fill="#efe2a8"/><polygon points="130.0,120.7 290.0,88.7 290.0,104.8 130.0,136.8" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,96.8 130.0,136.8 130.0,148.0 40.0,108.0" fill="#8a5a34"/><polygon points="130.0,136.8 290.0,104.8 290.0,116.0 130.0,148.0" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,108.0 130.0,148.0 130.0,164.1 40.0,124.1" fill="#efe2a8"/><polygon points="130.0,148.0 290.0,116.0 290.0,132.1 130.0,164.1" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,124.1 130.0,164.1 130.0,174.0 40.0,134.0" fill="#f4efe6"/><polygon points="130.0,164.1 290.0,132.1 290.0,142.0 130.0,174.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#fbf8f2"/><circle cx="89.2" cy="76.7" r="1.6" fill="#e7dfcf"/><circle cx="111.7" cy="86.7" r="1.6" fill="#e7dfcf"/><circle cx="134.2" cy="96.7" r="1.6" fill="#e7dfcf"/><circle cx="115.8" cy="71.3" r="1.6" fill="#e7dfcf"/><circle cx="138.3" cy="81.3" r="1.6" fill="#e7dfcf"/><circle cx="160.8" cy="91.3" r="1.6" fill="#e7dfcf"/><circle cx="142.5" cy="66.0" r="1.6" fill="#e7dfcf"/><circle cx="165.0" cy="76.0" r="1.6" fill="#e7dfcf"/><circle cx="187.5" cy="86.0" r="1.6" fill="#e7dfcf"/><circle cx="169.2" cy="60.7" r="1.6" fill="#e7dfcf"/><circle cx="191.7" cy="70.7" r="1.6" fill="#e7dfcf"/><circle cx="214.2" cy="80.7" r="1.6" fill="#e7dfcf"/><circle cx="195.8" cy="55.3" r="1.6" fill="#e7dfcf"/><circle cx="218.3" cy="65.3" r="1.6" fill="#e7dfcf"/><circle cx="240.8" cy="75.3" r="1.6" fill="#e7dfcf"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div>
+        <div class="body">
+          <h3>Σελήνη</h3>
+          <div class="desc">Φυσικό latex & κοκοφοίνικας. Δροσερό, σταθερό, με φυσική ελαστικότητα.</div>
+          <div class="firm">Σκληρότητα <span class="bar"><i style="width:62%"></i></span> Μέτρια-σκληρή</div>
+          <div class="price"><small>από</small><b>495 €</b></div>
+          <div class="inst">ή 36 άτοκες δόσεις των 13,75 €</div>
+        </div>
+      </a>
+      <a class="card" href="stroma.html">
+        <div class="pic"><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,120.7 40.0,80.7" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,88.7 130.0,120.7" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,80.7 130.0,120.7 130.0,134.3 40.0,94.3" fill="#d9d4ea"/><polygon points="130.0,120.7 290.0,88.7 290.0,102.3 130.0,134.3" fill="#d9d4ea" style="filter:brightness(.88)"/><polygon points="40.0,94.3 130.0,134.3 130.0,164.1 40.0,124.1" fill="#b9c3cf"/><polygon points="130.0,134.3 290.0,102.3 290.0,132.1 130.0,164.1" fill="#b9c3cf" style="filter:brightness(.88)"/><polygon points="40.0,124.1 130.0,164.1 130.0,174.0 40.0,134.0" fill="#f4efe6"/><polygon points="130.0,164.1 290.0,132.1 290.0,142.0 130.0,174.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#fbf8f2"/><circle cx="89.2" cy="76.7" r="1.6" fill="#e7dfcf"/><circle cx="111.7" cy="86.7" r="1.6" fill="#e7dfcf"/><circle cx="134.2" cy="96.7" r="1.6" fill="#e7dfcf"/><circle cx="115.8" cy="71.3" r="1.6" fill="#e7dfcf"/><circle cx="138.3" cy="81.3" r="1.6" fill="#e7dfcf"/><circle cx="160.8" cy="91.3" r="1.6" fill="#e7dfcf"/><circle cx="142.5" cy="66.0" r="1.6" fill="#e7dfcf"/><circle cx="165.0" cy="76.0" r="1.6" fill="#e7dfcf"/><circle cx="187.5" cy="86.0" r="1.6" fill="#e7dfcf"/><circle cx="169.2" cy="60.7" r="1.6" fill="#e7dfcf"/><circle cx="191.7" cy="70.7" r="1.6" fill="#e7dfcf"/><circle cx="214.2" cy="80.7" r="1.6" fill="#e7dfcf"/><circle cx="195.8" cy="55.3" r="1.6" fill="#e7dfcf"/><circle cx="218.3" cy="65.3" r="1.6" fill="#e7dfcf"/><circle cx="240.8" cy="75.3" r="1.6" fill="#e7dfcf"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div>
+        <div class="body">
+          <h3>Ηώς</h3>
+          <div class="desc">Ανεξάρτητα ελατήρια pocket & memory foam. Αγκαλιάζει το σώμα, ιδανικό για πλάγιο ύπνο.</div>
+          <div class="firm">Σκληρότητα <span class="bar"><i style="width:42%"></i></span> Μέτρια-μαλακή</div>
+          <div class="price"><small>από</small><b>425 €</b></div>
+          <div class="inst">ή 36 άτοκες δόσεις των 11,81 €</div>
+        </div>
+      </a>
+      <a class="card" href="stroma.html">
+        <div class="pic"><span class="tag">Ορθοπεδικό</span><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,119.4 40.0,79.4" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,87.4 130.0,119.4" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,79.4 130.0,119.4 130.0,130.6 40.0,90.6" fill="#8a5a34"/><polygon points="130.0,119.4 290.0,87.4 290.0,98.6 130.0,130.6" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,90.6 130.0,130.6 130.0,159.1 40.0,119.1" fill="#9aa6b4"/><polygon points="130.0,130.6 290.0,98.6 290.0,127.1 130.0,159.1" fill="#9aa6b4" style="filter:brightness(.88)"/><polygon points="40.0,119.1 130.0,159.1 130.0,166.6 40.0,126.6" fill="#8a5a34"/><polygon points="130.0,159.1 290.0,127.1 290.0,134.6 130.0,166.6" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,126.6 130.0,166.6 130.0,174.0 40.0,134.0" fill="#f4efe6"/><polygon points="130.0,166.6 290.0,134.6 290.0,142.0 130.0,174.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#fbf8f2"/><circle cx="89.2" cy="76.7" r="1.6" fill="#e7dfcf"/><circle cx="111.7" cy="86.7" r="1.6" fill="#e7dfcf"/><circle cx="134.2" cy="96.7" r="1.6" fill="#e7dfcf"/><circle cx="115.8" cy="71.3" r="1.6" fill="#e7dfcf"/><circle cx="138.3" cy="81.3" r="1.6" fill="#e7dfcf"/><circle cx="160.8" cy="91.3" r="1.6" fill="#e7dfcf"/><circle cx="142.5" cy="66.0" r="1.6" fill="#e7dfcf"/><circle cx="165.0" cy="76.0" r="1.6" fill="#e7dfcf"/><circle cx="187.5" cy="86.0" r="1.6" fill="#e7dfcf"/><circle cx="169.2" cy="60.7" r="1.6" fill="#e7dfcf"/><circle cx="191.7" cy="70.7" r="1.6" fill="#e7dfcf"/><circle cx="214.2" cy="80.7" r="1.6" fill="#e7dfcf"/><circle cx="195.8" cy="55.3" r="1.6" fill="#e7dfcf"/><circle cx="218.3" cy="65.3" r="1.6" fill="#e7dfcf"/><circle cx="240.8" cy="75.3" r="1.6" fill="#e7dfcf"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div>
+        <div class="body">
+          <h3>Αστραία</h3>
+          <div class="desc">Ορθοπεδικά ελατήρια με κοκοφοίνικα και στις δύο πλευρές. Σταθερή στήριξη για τη μέση.</div>
+          <div class="firm">Σκληρότητα <span class="bar"><i style="width:82%"></i></span> Σκληρή</div>
+          <div class="price"><small>από</small><b>350 €</b></div>
+          <div class="inst">ή 36 άτοκες δόσεις των 9,72 €</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="layers" id="ylika">
+  <div class="wrap">
+    <div class="eyebrow">Τι έχει μέσα</div>
+    <h2 class="sec-h" style="color:#fff">Δες το στρώμα από μέσα.</h2>
+    <p class="lead">Δεν κρύβουμε τίποτα. Πάτα σε κάθε στρώση της Σελήνης και δες από τι είναι φτιαγμένη.</p>
+    <div class="lgrid">
+      <div><svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="lyr" data-l="cover" tabindex="0" role="button"><polygon points="40.0,42.0 130.0,82.0 130.0,94.4 40.0,54.4" fill="#f4efe6"/><polygon points="130.0,82.0 290.0,50.0 290.0,62.4 130.0,94.4" fill="#f4efe6" style="filter:brightness(.86)"/><polygon points="40.0,42.0 200.0,10.0 290.0,50.0 130.0,82.0" fill="#f4efe6" style="filter:brightness(1.08)"/></g><g class="lyr" data-l="latex" tabindex="0" role="button"><polygon points="40.0,70.4 130.0,110.4 130.0,129.0 40.0,89.0" fill="#efe2a8"/><polygon points="130.0,110.4 290.0,78.4 290.0,97.0 130.0,129.0" fill="#efe2a8" style="filter:brightness(.86)"/><polygon points="40.0,70.4 200.0,38.4 290.0,78.4 130.0,110.4" fill="#efe2a8" style="filter:brightness(1.08)"/></g><g class="lyr" data-l="coco" tabindex="0" role="button"><polygon points="40.0,105.0 130.0,145.0 130.0,157.4 40.0,117.4" fill="#8a5a34"/><polygon points="130.0,145.0 290.0,113.0 290.0,125.4 130.0,157.4" fill="#8a5a34" style="filter:brightness(.86)"/><polygon points="40.0,105.0 200.0,73.0 290.0,113.0 130.0,145.0" fill="#8a5a34" style="filter:brightness(1.08)"/></g><g class="lyr" data-l="latex2" tabindex="0" role="button"><polygon points="40.0,133.4 130.0,173.4 130.0,192.0 40.0,152.0" fill="#efe2a8"/><polygon points="130.0,173.4 290.0,141.4 290.0,160.0 130.0,192.0" fill="#efe2a8" style="filter:brightness(.86)"/><polygon points="40.0,133.4 200.0,101.4 290.0,141.4 130.0,173.4" fill="#efe2a8" style="filter:brightness(1.08)"/></g><g class="lyr" data-l="cover2" tabindex="0" role="button"><polygon points="40.0,168.0 130.0,208.0 130.0,220.4 40.0,180.4" fill="#f4efe6"/><polygon points="130.0,208.0 290.0,176.0 290.0,188.4 130.0,220.4" fill="#f4efe6" style="filter:brightness(.86)"/><polygon points="40.0,168.0 200.0,136.0 290.0,176.0 130.0,208.0" fill="#f4efe6" style="filter:brightness(1.08)"/></g></svg></div>
+      <div>
+        <div class="ltabs" id="ltabs"></div>
+        <div class="linfo"><h3 id="lt"></h3><p id="ld"></p><div class="chips" id="lc"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diastasi">
+  <div class="wrap custom">
+    <div class="vis"><div class="dim" id="dimBox"><span class="wlab" id="wlab">160 cm</span><span class="hlab" id="hlab">200 cm</span><span id="dimTxt">160 × 200</span></div></div>
+    <div>
+      <div class="eyebrow">Το πλεονέκτημα της βιοτεχνίας</div>
+      <h2 class="sec-h">Ειδική διάσταση; Τη φτιάχνουμε.</h2>
+      <p class="lead">Κρεβάτι αντίκα, σκάφος, τροχόσπιτο ή απλώς ένα κρεβάτι που δεν είναι «στάνταρ». Γράψε τις διαστάσεις και δες την τιμή αμέσως.</p>
+      <div class="calc">
+        <label>Πλάτος (cm)<input type="number" id="cw" value="160" min="60" max="220" inputmode="numeric"></label>
+        <label>Μήκος (cm)<input type="number" id="ch" value="200" min="120" max="220" inputmode="numeric"></label>
+        <label class="full">Μοντέλο<select id="cm"><option value="selini">Σελήνη · latex & κοκοφοίνικας</option><option value="eos">Ηώς · pocket & memory</option><option value="astraia">Αστραία · ορθοπεδικό</option></select></label>
+      </div>
+      <div class="cprice">Τιμή: <b id="cp">690 €</b> <span id="cnote"></span></div>
+      <ul class="ul"><li>Χωρίς επιπλέον χρέωση για ειδική διάσταση</li><li>Έτοιμο σε 7–10 εργάσιμες</li><li>Στρογγυλεμένες ή κομμένες γωνίες κατόπιν συνεννόησης</li></ul>
+      <button class="btn btn-dark" onclick="addCart()">Προσθήκη στο καλάθι</button>
+    </div>
+  </div>
+</section>
+
+<section class="bebe" id="bebestrom">
+  <div class="wrap">
+    <div class="bebe-top">
+      <div>
+        <div class="eyebrow">Η βρεφική μας σειρά</div>
+        <div class="bebe-logo">Bebestrom<small>Τα πρώτα όνειρα, εδώ και 40 χρόνια</small></div>
+      </div>
+      <a href="#" class="btn btn-dark">Όλα τα βρεφικά</a>
+    </div>
+    <div class="grid3">
+      <a class="card" href="#"><div class="pic"><span class="tag">Κούνια</span><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,118.4 40.0,78.4" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,86.4 130.0,118.4" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,78.4 130.0,118.4 130.0,125.6 40.0,85.6" fill="#8a5a34"/><polygon points="130.0,118.4 290.0,86.4 290.0,93.6 130.0,125.6" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,85.6 130.0,125.6 130.0,144.8 40.0,104.8" fill="#9aa6b4"/><polygon points="130.0,125.6 290.0,93.6 290.0,112.8 130.0,144.8" fill="#9aa6b4" style="filter:brightness(.88)"/><polygon points="40.0,104.8 130.0,144.8 130.0,152.0 40.0,112.0" fill="#f4efe6"/><polygon points="130.0,144.8 290.0,112.8 290.0,120.0 130.0,152.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#ffffff"/><circle cx="89.2" cy="76.7" r="1.6" fill="#c9d9e6"/><circle cx="111.7" cy="86.7" r="1.6" fill="#c9d9e6"/><circle cx="134.2" cy="96.7" r="1.6" fill="#c9d9e6"/><circle cx="115.8" cy="71.3" r="1.6" fill="#c9d9e6"/><circle cx="138.3" cy="81.3" r="1.6" fill="#c9d9e6"/><circle cx="160.8" cy="91.3" r="1.6" fill="#c9d9e6"/><circle cx="142.5" cy="66.0" r="1.6" fill="#c9d9e6"/><circle cx="165.0" cy="76.0" r="1.6" fill="#c9d9e6"/><circle cx="187.5" cy="86.0" r="1.6" fill="#c9d9e6"/><circle cx="169.2" cy="60.7" r="1.6" fill="#c9d9e6"/><circle cx="191.7" cy="70.7" r="1.6" fill="#c9d9e6"/><circle cx="214.2" cy="80.7" r="1.6" fill="#c9d9e6"/><circle cx="195.8" cy="55.3" r="1.6" fill="#c9d9e6"/><circle cx="218.3" cy="65.3" r="1.6" fill="#c9d9e6"/><circle cx="240.8" cy="75.3" r="1.6" fill="#c9d9e6"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div><div class="body"><h3>Απόλλων</h3><div class="desc">Ελατήρια & κοκοφοίνικας. Το κλασικό ορθοπεδικό στρώμα κούνιας.</div><div class="price"><small>από</small><b>82 €</b></div></div></a>
+      <a class="card" href="#"><div class="pic"><span class="tag">Κούνια</span><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,118.5 40.0,78.5" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,86.5 130.0,118.5" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,78.5 130.0,118.5 130.0,130.0 40.0,90.0" fill="#efe2a8"/><polygon points="130.0,118.5 290.0,86.5 290.0,98.0 130.0,130.0" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,90.0 130.0,130.0 130.0,141.5 40.0,101.5" fill="#8a5a34"/><polygon points="130.0,130.0 290.0,98.0 290.0,109.5 130.0,141.5" fill="#8a5a34" style="filter:brightness(.88)"/><polygon points="40.0,101.5 130.0,141.5 130.0,148.0 40.0,108.0" fill="#f4efe6"/><polygon points="130.0,141.5 290.0,109.5 290.0,116.0 130.0,148.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#ffffff"/><circle cx="89.2" cy="76.7" r="1.6" fill="#c9d9e6"/><circle cx="111.7" cy="86.7" r="1.6" fill="#c9d9e6"/><circle cx="134.2" cy="96.7" r="1.6" fill="#c9d9e6"/><circle cx="115.8" cy="71.3" r="1.6" fill="#c9d9e6"/><circle cx="138.3" cy="81.3" r="1.6" fill="#c9d9e6"/><circle cx="160.8" cy="91.3" r="1.6" fill="#c9d9e6"/><circle cx="142.5" cy="66.0" r="1.6" fill="#c9d9e6"/><circle cx="165.0" cy="76.0" r="1.6" fill="#c9d9e6"/><circle cx="187.5" cy="86.0" r="1.6" fill="#c9d9e6"/><circle cx="169.2" cy="60.7" r="1.6" fill="#c9d9e6"/><circle cx="191.7" cy="70.7" r="1.6" fill="#c9d9e6"/><circle cx="214.2" cy="80.7" r="1.6" fill="#c9d9e6"/><circle cx="195.8" cy="55.3" r="1.6" fill="#c9d9e6"/><circle cx="218.3" cy="65.3" r="1.6" fill="#c9d9e6"/><circle cx="240.8" cy="75.3" r="1.6" fill="#c9d9e6"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div><div class="body"><h3>Φοίβος</h3><div class="desc">Κοκοφοίνικας & φυσικό latex. Χωρίς ελατήρια, φυσικά υλικά.</div><div class="price"><small>από</small><b>125 €</b></div></div></a>
+      <a class="card" href="#"><div class="pic"><span class="tag">Κούνια</span><svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="165" cy="188" rx="140" ry="12" fill="#000" opacity=".07"/><polygon points="40.0,72.0 130.0,112.0 130.0,118.7 40.0,78.7" fill="#f4efe6"/><polygon points="130.0,112.0 290.0,80.0 290.0,86.7 130.0,118.7" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,78.7 130.0,118.7 130.0,128.0 40.0,88.0" fill="#efe2a8"/><polygon points="130.0,118.7 290.0,86.7 290.0,96.0 130.0,128.0" fill="#efe2a8" style="filter:brightness(.88)"/><polygon points="40.0,88.0 130.0,128.0 130.0,146.4 40.0,106.4" fill="#b9c3cf"/><polygon points="130.0,128.0 290.0,96.0 290.0,114.4 130.0,146.4" fill="#b9c3cf" style="filter:brightness(.88)"/><polygon points="40.0,106.4 130.0,146.4 130.0,154.0 40.0,114.0" fill="#f4efe6"/><polygon points="130.0,146.4 290.0,114.4 290.0,122.0 130.0,154.0" fill="#f4efe6" style="filter:brightness(.88)"/><polygon points="40.0,72.0 200.0,40.0 290.0,80.0 130.0,112.0" fill="#ffffff"/><circle cx="89.2" cy="76.7" r="1.6" fill="#c9d9e6"/><circle cx="111.7" cy="86.7" r="1.6" fill="#c9d9e6"/><circle cx="134.2" cy="96.7" r="1.6" fill="#c9d9e6"/><circle cx="115.8" cy="71.3" r="1.6" fill="#c9d9e6"/><circle cx="138.3" cy="81.3" r="1.6" fill="#c9d9e6"/><circle cx="160.8" cy="91.3" r="1.6" fill="#c9d9e6"/><circle cx="142.5" cy="66.0" r="1.6" fill="#c9d9e6"/><circle cx="165.0" cy="76.0" r="1.6" fill="#c9d9e6"/><circle cx="187.5" cy="86.0" r="1.6" fill="#c9d9e6"/><circle cx="169.2" cy="60.7" r="1.6" fill="#c9d9e6"/><circle cx="191.7" cy="70.7" r="1.6" fill="#c9d9e6"/><circle cx="214.2" cy="80.7" r="1.6" fill="#c9d9e6"/><circle cx="195.8" cy="55.3" r="1.6" fill="#c9d9e6"/><circle cx="218.3" cy="65.3" r="1.6" fill="#c9d9e6"/><circle cx="240.8" cy="75.3" r="1.6" fill="#c9d9e6"/><polyline points="40.0,72.0 130.0,112.0 290.0,80.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/></svg></div><div class="body"><h3>Baby Soft Pocket</h3><div class="desc">Ανεξάρτητα ελατήρια με latex, για παιδιά που μεγαλώνουν.</div><div class="price"><small>από</small><b>185 €</b></div></div></a>
+    </div>
+    <div class="safe">
+      <div><b>Σωστή σκληρότητα</b>Τα βρεφικά στρώματα πρέπει να είναι σταθερά, όχι μαλακά. Όλα μας είναι.</div>
+      <div><b>Ακριβής διάσταση</b>Το στρώμα πρέπει να εφαρμόζει στην κούνια χωρίς κενά. Φτιάχνουμε και ειδικές διαστάσεις.</div>
+      <div><b>Αφαιρούμενο κάλυμμα</b>Πλένεται, για καθαρό και υγιεινό ύπνο κάθε μέρα.</div>
+    </div>
+  </div>
+</section>
+
+<section id="istoria">
+  <div class="wrap story">
+    <div class="ill">
+      <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <rect x="30" y="40" width="240" height="230" rx="6" fill="#efe6d6"/>
+        <path d="M30 150h240" stroke="#d7c9b0" stroke-width="2"/>
+        <rect x="60" y="85" width="180" height="40" rx="6" fill="#16213a"/><rect x="60" y="85" width="180" height="12" rx="6" fill="#f4efe6"/>
+        <text x="150" y="70" text-anchor="middle" font-family="Commissioner,sans-serif" font-size="12" fill="#8a7a5c" letter-spacing="2">SHOWROOM</text>
+        <rect x="55" y="200" width="120" height="36" rx="4" fill="#f4efe6" stroke="#c9a96a"/><path d="M60 218h110" stroke="#c9a96a" stroke-dasharray="4 4"/>
+        <rect x="195" y="185" width="45" height="51" rx="3" fill="#8a5a34"/><rect x="195" y="185" width="45" height="10" fill="#efe2a8"/>
+        <text x="150" y="176" text-anchor="middle" font-family="Commissioner,sans-serif" font-size="12" fill="#8a7a5c" letter-spacing="2">ΕΡΓΑΣΤΗΡΙΟ</text>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow">Η ιστορία μας</div>
+      <h2 class="sec-h">Κάτω το εργαστήριο. Πάνω, το κρεβάτι σου.</h2>
+      <p class="lead">Εδώ και 40 χρόνια ράβουμε στρώματα με τα χέρια μας. Ξεκινήσαμε με τα βρεφικά Bebestrom, που εμπιστεύονται τα καλύτερα καταστήματα βρεφικών της Ελλάδας. Σήμερα φτιάχνουμε με την ίδια φροντίδα στρώματα για όλη την οικογένεια.</p>
+      <div class="tl">
+        <div><b>Η αρχή</b><span>Το πρώτο εργαστήριο και τα πρώτα βρεφικά στρώματα.</span></div>
+        <div><b>Bebestrom</b><span>Το βρεφικό στρώμα που ξέρουν τα καταστήματα σε όλη την Ελλάδα.</span></div>
+        <div><b>Το showroom</b><span>Πάνω από το εργαστήριο, για να δοκιμάζεις πριν αγοράσεις.</span></div>
+        <div><b>Σήμερα</b><span>Το eshop μας, με τα ίδια χέρια πίσω από κάθε παραγγελία.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="showroom" style="padding-top:0">
+  <div class="wrap">
+    <div class="show">
+      <div class="map"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M0 200 Q120 150 220 190 T400 160" stroke="#fff" stroke-width="14" fill="none"/><path d="M150 0 L190 300" stroke="#fff" stroke-width="10"/><path d="M0 80 L400 110" stroke="#fff" stroke-width="6"/><circle cx="180" cy="180" r="34" fill="#c9a96a" opacity=".25"/><path d="M180 150c-14 0-24 10-24 23 0 17 24 37 24 37s24-20 24-37c0-13-10-23-24-23Z" fill="#16213a"/><circle cx="180" cy="173" r="8" fill="#c9a96a"/></svg></div>
+      <div class="txt">
+        <div class="eyebrow">Showroom</div>
+        <h2 class="sec-h" style="font-size:clamp(28px,4vw,38px)">Έλα να ξαπλώσεις πριν αποφασίσεις.</h2>
+        <p class="lead" style="font-size:16px">Κλείσε ραντεβού και σε περιμένουμε, χωρίς βιασύνη και χωρίς δέσμευση. Διεύθυνση και ωράριο: <i>θα συμπληρωθούν</i>.</p>
+        <div class="slots" id="slots"><button>Δευ 10:00</button><button>Δευ 18:00</button><button>Τρι 11:00</button><button>Τετ 17:30</button><button>Σάβ 11:00</button></div>
+        <button class="btn btn-dark" onclick="toast('Το ραντεβού σου καταχωρήθηκε (δείγμα)')">Κλείσε ραντεβού</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="sec-h center">Συχνές ερωτήσεις</h2>
+    <div class="faq">
+      <details><summary>Πόσο γρήγορα θα έρθει το στρώμα μου;</summary><p>Τα στάνταρ μεγέθη σε 3–5 εργάσιμες. Οι ειδικές διαστάσεις σε 7–10 εργάσιμες, γιατί τις ράβουμε για σένα.</p></details>
+      <details><summary>Παίρνετε το παλιό μου στρώμα;</summary><p>Ναι. Με την παράδοση παίρνουμε το παλιό στρώμα χωρίς χρέωση, και το στέλνουμε για ανακύκλωση.</p></details>
+      <details><summary>Πώς διαλέγω σκληρότητα;</summary><p>Κάνε το <a href="#quiz" style="text-decoration:underline">quiz</a> ή έλα στο showroom. Γενικά: πλάγιος ύπνος θέλει πιο μαλακό, ανάσκελα και πόνοι στη μέση θέλουν πιο σταθερό.</p></details>
+      <details><summary>Μπορώ να πληρώσω με δόσεις;</summary><p>Ναι, έως 36 άτοκες δόσεις με πιστωτική κάρτα. Δεχόμαστε επίσης Apple Pay, Google Pay, IRIS, αντικαταβολή και πληρωμή στο showroom.</p></details>
+      <details><summary>Πουλάτε σε καταστήματα;</summary><p>Ναι. Τα καταστήματα μπορούν να ανοίξουν λογαριασμό χονδρικής και να βλέπουν τιμές χονδρικής για όλη τη σειρά Bebestrom.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="news">
+  <div class="wrap">
+    <h2 class="sec-h">Καλύτερος ύπνος, στο email σου.</h2>
+    <p class="lead" style="margin:0 auto">Συμβουλές ύπνου και προσφορές πρώτος. Χωρίς spam.</p>
+    <form onsubmit="event.preventDefault();toast('Ευχαριστούμε! (δείγμα)')"><label for="nl" style="position:absolute;left:-9999px">Email</label><input id="nl" type="email" placeholder="Το email σου" required><button class="btn btn-dark">Εγγραφή</button></form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand"><div class="logo"><svg viewBox="0 0 24 24" fill="none" width="22"><path d="M15 3a9 9 0 1 0 6 15.4A9.8 9.8 0 0 1 15 3Z" stroke="#c9a96a" stroke-width="1.6"/></svg>ENDYMION</div><p>Χειροποίητα στρώματα εδώ και 40 χρόνια. Και η βρεφική σειρά Bebestrom.</p><p style="margin-top:10px">Τηλ. · Email · Διεύθυνση: <i>θα συμπληρωθούν</i></p></div>
+      <div><h4>Κατάστημα</h4><a href="#stromata">Στρώματα</a><a href="#bebestrom">Bebestrom</a><a href="#diastasi">Ειδική διάσταση</a><a href="#">Μαξιλάρια</a></div>
+      <div><h4>Βοήθεια</h4><a href="#">Αποστολές</a><a href="#">Επιστροφές</a><a href="#">Τρόποι πληρωμής</a><a href="#">Εγγύηση</a></div>
+      <div><h4>Εταιρεία</h4><a href="#istoria">Η ιστορία μας</a><a href="#showroom">Showroom</a><a href="#">Χονδρική</a><a href="#">Επικοινωνία</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Endymion · Επωνυμία · ΑΦΜ · ΓΕΜΗ</span><span><a href="#">Όροι χρήσης</a> · <a href="#">Πολιτική απορρήτου</a> · <a href="#">Cookies</a></span><span class="pay"><span>VISA</span><span>Mastercard</span><span>Apple Pay</span><span>Google Pay</span><span>IRIS</span></span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+function closeM(){document.querySelector('.mnav').classList.remove('open')}
+let cart=0;
+function toast(t,link){const el=document.getElementById('toast');el.innerHTML=t+(link?' <a href="#">Καλάθι →</a>':'');el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2600)}
+function addCart(){cart++;document.getElementById('cartN').textContent=cart;toast('Προστέθηκε στο καλάθι',1)}
+
+/* quiz */
+const Q=[
+ {q:'Πώς κοιμάσαι συνήθως;',o:[['Στο πλάι','eos',2],['Ανάσκελα','selini',2],['Μπρούμυτα','astraia',2],['Αλλάζω συνέχεια','selini',1]]},
+ {q:'Πόσο ζυγίζεις περίπου;',o:[['Κάτω από 65 κιλά','eos',1],['65–90 κιλά','selini',1],['Πάνω από 90 κιλά','astraia',2],['Κοιμόμαστε δύο, διαφορετικά','selini',1]]},
+ {q:'Πονάει η μέση ή η πλάτη σου;',o:[['Ναι, συχνά','astraia',3],['Πού και πού','selini',1],['Όχι','eos',1],['Πονάνε οι ώμοι','eos',2]]},
+ {q:'Ζεσταίνεσαι τη νύχτα;',o:[['Ναι, πολύ','selini',2],['Λίγο','selini',1],['Όχι, κρυώνω','eos',1],['Δεν ξέρω','astraia',0]]},
+ {q:'Τι αίσθηση σου αρέσει;',o:[['Να «βουλιάζω» λίγο','eos',2],['Ισορροπία','selini',2],['Σταθερό, «σανίδα»','astraia',2],['Δεν έχω ιδέα','selini',1]]}
+];
+const R={selini:['Σελήνη','Φυσικό latex και κοκοφοίνικας: δροσερό, ελαστικό και σταθερό. Ταιριάζει σε όσους αλλάζουν θέση και ζεσταίνονται.'],
+ eos:['Ηώς','Τα ελατήρια pocket με memory foam αγκαλιάζουν ώμους και γοφούς. Ιδανικό για πλάγιο ύπνο.'],
+ astraia:['Αστραία','Ορθοπεδικά ελατήρια με κοκοφοίνικα: σταθερή στήριξη για τη μέση και για πιο βαριά σώματα.']};
+const MSV={selini:document.querySelector('#stromata .card:nth-child(1) svg').outerHTML,eos:document.querySelector('#stromata .card:nth-child(2) svg').outerHTML,astraia:document.querySelector('#stromata .card:nth-child(3) svg').outerHTML};
+let qi=0,sc={};
+function qStart(){qi=0;sc={selini:0,eos:0,astraia:0};document.getElementById('qwrap').style.display='';document.getElementById('qres').style.display='none';qShow()}
+function qShow(){const x=Q[qi];document.getElementById('qbar').style.width=(qi/Q.length*100)+'%';document.getElementById('qstep').textContent='Ερώτηση '+(qi+1)+' από '+Q.length;document.getElementById('qq').textContent=x.q;
+ const o=document.getElementById('qopts');o.innerHTML='';x.o.forEach(a=>{const b=document.createElement('button');b.textContent=a[0];b.onclick=()=>{sc[a[1]]+=a[2];qi++;qi<Q.length?qShow():qEnd()};o.appendChild(b)})}
+function qEnd(){document.getElementById('qbar').style.width='100%';const best=Object.keys(sc).sort((a,b)=>sc[b]-sc[a])[0];document.getElementById('qwrap').style.display='none';const r=document.getElementById('qres');r.style.display='block';document.getElementById('qname').textContent=R[best][0];document.getElementById('qwhy').textContent=R[best][1];document.getElementById('qmat').innerHTML=MSV[best]}
+qStart();
+
+/* layers */
+const L={cover:['Κάλυμμα','Ύφασμα με βαμβάκι, καπιτονέ στο χέρι. Αφαιρείται και πλένεται.',['Βαμβάκι','Αντιαλλεργικό','Πλένεται']],
+ latex:['Φυσικό latex','Από χυμό του δέντρου του καουτσούκ. Ελαστικό, δροσερό, ανθεκτικό σε ακάρεα.',['Φυσικό','Δροσερό','Ελαστικό']],
+ coco:['Κοκοφοίνικας','Ίνες από το περίβλημα της καρύδας. Δίνει σταθερή στήριξη και αφήνει το στρώμα να αναπνέει.',['Φυσική ίνα','Στήριξη','Αερίζεται']]};
+const map={cover:'cover',cover2:'cover',latex:'latex',latex2:'latex',coco:'coco'};
+const tabs=document.getElementById('ltabs');
+['cover','latex','coco'].forEach(k=>{const b=document.createElement('button');b.textContent=L[k][0];b.dataset.k=k;b.onclick=()=>lset(k);tabs.appendChild(b)});
+function lset(k){const d=L[k];document.getElementById('lt').textContent=d[0];document.getElementById('ld').textContent=d[1];document.getElementById('lc').innerHTML=d[2].map(c=>'<span>'+c+'</span>').join('');
+ document.querySelectorAll('.lyr').forEach(g=>g.classList.toggle('on',map[g.dataset.l]===k));tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===k))}
+document.querySelectorAll('.lyr').forEach(g=>{g.addEventListener('click',()=>lset(map[g.dataset.l]));g.addEventListener('keydown',e=>{if(e.key==='Enter')lset(map[g.dataset.l])})});
+lset('latex');
+
+/* custom size */
+const RATE={selini:690,eos:590,astraia:490};
+function calc(){const w=Math.min(220,Math.max(60,+cw.value||0)),h=Math.min(220,Math.max(120,+ch.value||0));const area=w*h/(160*200);const p=Math.round(RATE[cm.value]*(0.35+0.65*area)/5)*5;
+ cp.textContent=p.toLocaleString('el-GR')+' €';cnote.textContent='· ή 36 × '+(p/36).toFixed(2).replace('.',',')+' €';
+ const box=document.getElementById('dimBox');box.style.aspectRatio=w+'/'+h;wlab.textContent=w+' cm';hlab.textContent=h+' cm';dimTxt.textContent=w+' × '+h}
+['cw','ch','cm'].forEach(i=>document.getElementById(i).addEventListener('input',calc));calc();
+
+document.querySelectorAll('#slots button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#slots button').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
+</script>
+</body>
+</html>
