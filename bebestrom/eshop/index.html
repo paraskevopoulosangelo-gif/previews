@@ -220,6 +220,39 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
 .pay span{border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:3px 8px;font-size:11px}
 @media(min-width:900px){.fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr}.fbrand{grid-column:auto}}
 
+/* comfort guarantee */
+.cg{display:grid;gap:22px;background:var(--white);border:1px solid var(--line);border-radius:24px;padding:30px 24px;align-items:center}
+.cg .big{font-family:var(--serif);font-size:clamp(64px,12vw,120px);line-height:.9;color:var(--gold-d)}
+.cg .big small{display:block;font-family:var(--sans);font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.cg ol{list-style:none;counter-reset:c;display:grid;gap:12px;margin-top:16px}
+.cg li{counter-increment:c;padding-left:40px;position:relative}
+.cg li::before{content:counter(c);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--gold-d);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+@media(min-width:900px){.cg{grid-template-columns:auto 1fr;gap:60px;padding:48px}}
+/* grows with you */
+.grow{display:grid;gap:12px;margin-top:30px;grid-template-columns:1fr 1fr}
+.grow>div{background:var(--white);border:1px solid #d4e3ef;border-radius:16px;padding:18px;position:relative}
+.grow .age{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--baby-d);font-weight:600}
+.grow b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;margin:4px 0}
+.grow span{font-size:14px;color:var(--muted)}
+.grow .adult{background:var(--night);border-color:var(--night);color:#fff}
+.grow .adult .age{color:var(--gold)}.grow .adult span{color:#cfc7b6}
+@media(min-width:900px){.grow{grid-template-columns:repeat(4,1fr)}}
+/* bundle */
+.bundle{background:linear-gradient(120deg,var(--cream),#efe5d2);border-radius:24px;padding:30px 24px;display:grid;gap:20px;align-items:center}
+.bundle .items{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.bundle .items span{background:var(--white);border-radius:999px;padding:7px 14px;font-size:14px}
+.bundle .pr{font-family:var(--serif);font-size:34px}
+.bundle .pr s{font-size:20px;color:var(--muted);margin-right:8px}
+.bundle .pr small{font-family:var(--sans);font-size:14px;color:var(--ok);margin-left:8px}
+@media(min-width:900px){.bundle{grid-template-columns:1.3fr 1fr;padding:44px}}
+/* reviews slot */
+.rev{display:grid;gap:14px;margin-top:28px}
+.rev div{background:var(--white);border:1.5px dashed var(--line);border-radius:16px;padding:22px;color:var(--muted);font-size:14px;text-align:center}
+.rev b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+@media(min-width:900px){.rev{grid-template-columns:repeat(3,1fr)}}
+.visit{display:grid;gap:10px;margin:16px 0 18px}
+.visit div{display:flex;gap:10px;font-size:15px}
+.visit svg{width:20px;flex:none;color:var(--gold-d);margin-top:3px}
 /* cart toast */
 .toast{visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);background:var(--night);color:#fff;padding:14px 20px;border-radius:14px;font-size:14px;z-index:80;transition:.3s;display:flex;gap:14px;align-items:center;box-shadow:0 20px 40px -20px #000}
 .toast.show{transform:translate(-50%,0);visibility:visible}
@@ -228,7 +261,7 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
 </head>
 <body>
 <div class="demo">Δείγμα σχεδίου · Το όνομα, οι τιμές και τα κείμενα είναι ενδεικτικά</div>
-<div class="ann"><div class="wrap"><span>Δωρεάν παράδοση σε όλη την Ελλάδα</span><span>·</span><span>Έως 36 άτοκες δόσεις</span><span>·</span><span>Ειδικές διαστάσεις χωρίς χρέωση</span></div></div>
+<div class="ann"><div class="wrap"><span>Δωρεάν παράδοση σε όλη την Ελλάδα</span><span>·</span><span>Έως 36 άτοκες δόσεις</span><span>·</span><span>Ειδικές διαστάσεις χωρίς χρέωση</span><span>·</span><span>60 νύχτες δοκιμή στο σπίτι</span></div></div>
 
 <header class="site">
   <div class="wrap">
@@ -288,7 +321,7 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
     <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h17v13H3zM20 13h5l4 4v5h-9"/><circle cx="8" cy="24" r="2.5"/><circle cx="24" cy="24" r="2.5"/></svg><p><b>Δωρεάν παράδοση</b><span>και απόσυρση του παλιού</span></p></div>
     <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="M3 13h26M8 20h6"/></svg><p><b>Έως 36 άτοκες δόσεις</b><span>με όλες τις κάρτες</span></p></div>
     <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7Z"/><path d="m11 16 4 4 7-8"/></svg><p><b>10 χρόνια εγγύηση</b><span>από τον κατασκευαστή</span></p></div>
-    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 26V12l10-7 10 7v14"/><path d="M12 26v-8h8v8"/></svg><p><b>Δοκίμασέ το</b><span>στο showroom μας</span></p></div>
+    <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 26V12l10-7 10 7v14"/><path d="M12 26v-8h8v8"/></svg><p><b>60 νύχτες δοκιμή</b><span>με εγγύηση άνεσης</span></p></div>
   </div>
 </div>
 
@@ -356,6 +389,24 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
   </div>
 </section>
 
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cg">
+      <div class="big">60<small>νύχτες δοκιμή</small></div>
+      <div>
+        <div class="eyebrow">Εγγύηση άνεσης</div>
+        <h2 class="sec-h" style="font-size:clamp(28px,4vw,40px)">Κοιμήσου 60 νύχτες. Αν δεν σου κάνει, το φτιάχνουμε.</h2>
+        <p class="lead" style="font-size:16px">Επειδή το ράβουμε εμείς, μπορούμε να κάνουμε κάτι που οι μεγάλοι δεν κάνουν: να αλλάξουμε τη σκληρότητα του δικού σου στρώματος.</p>
+        <ol>
+          <li>Κοιμάσαι στο στρώμα σου τουλάχιστον 30 νύχτες, για να συνηθίσει το σώμα.</li>
+          <li>Αν δεν σου ταιριάζει, μας παίρνεις τηλέφωνο. Έρχεται ο τεχνίτης μας.</li>
+          <li>Αλλάζουμε τη στρώση άνεσης στο εργαστήριο, ή σου δίνουμε άλλο μοντέλο.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="layers" id="ylika">
   <div class="wrap">
     <div class="eyebrow">Τι έχει μέσα</div>
@@ -409,6 +460,41 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
       <div><b>Ακριβής διάσταση</b>Το στρώμα πρέπει να εφαρμόζει στην κούνια χωρίς κενά. Φτιάχνουμε και ειδικές διαστάσεις.</div>
       <div><b>Αφαιρούμενο κάλυμμα</b>Πλένεται, για καθαρό και υγιεινό ύπνο κάθε μέρα.</div>
     </div>
+    <h3 style="font-size:clamp(26px,4vw,36px);margin-top:48px;color:#2f5a80">Μεγαλώνει μαζί σας.</h3>
+    <p class="lead">Από το πρώτο λίκνο μέχρι το διπλό κρεβάτι των γονιών: ένα εργαστήριο, η ίδια φροντίδα.</p>
+    <div class="grow">
+      <div><div class="age">0–6 μηνών</div><b>Λίκνο & καλαθούνα</b><span>Λεπτά, σταθερά στρώματα στη διάσταση που χρειάζεσαι.</span></div>
+      <div><div class="age">6 μηνών – 4 ετών</div><b>Κούνια δύο όψεων</b><span>Σταθερή όψη για το βρέφος, πιο μαλακή όταν γίνει νήπιο. Απλώς το γυρίζεις.</span></div>
+      <div><div class="age">4–14 ετών</div><b>Παιδικό & εφηβικό</b><span>Ορθοπεδική στήριξη για την ανάπτυξη της πλάτης.</span></div>
+      <div class="adult"><div class="age">Ενήλικες</div><b>Endymion</b><span>Σελήνη, Ηώς, Αστραία: για όλη την οικογένεια.</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="bundle">
+      <div>
+        <div class="eyebrow">Σετ ύπνου</div>
+        <h2 class="sec-h" style="font-size:clamp(28px,4vw,40px)">Όλο το κρεβάτι, σε μία παραγγελία.</h2>
+        <div class="items"><span>Στρώμα Σελήνη</span><span>2 μαξιλάρια latex</span><span>Αδιάβροχο προστατευτικό</span></div>
+        <div class="pr"><s>819 €</s>735 €<small>−10% στο σετ</small></div>
+      </div>
+      <div><a href="stroma.html" class="btn btn-dark">Φτιάξε το σετ σου</a><p style="font-size:13px;color:var(--muted);margin-top:10px">Τιμή για 160 × 200. Η έκπτωση μπαίνει αυτόματα στο καλάθι.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kritikes">
+  <div class="wrap center">
+    <div class="eyebrow">Κριτικές</div>
+    <h2 class="sec-h">Τι λένε όσοι κοιμούνται σε αυτά.</h2>
+    <p class="lead">Μόνο αληθινές κριτικές από επαληθευμένες αγορές και από το Google. Ποτέ γραμμένες από εμάς.</p>
+    <div class="rev">
+      <div><b>Κριτική πελάτη</b>Εδώ εμφανίζονται οι αληθινές κριτικές Google της επιχείρησης</div>
+      <div><b>Κριτική πελάτη</b>με αστέρια, όνομα και ημερομηνία</div>
+      <div><b>Κριτική πελάτη</b>και φωτογραφία, όταν ο πελάτης ανεβάσει</div>
+    </div>
   </div>
 </section>
 
@@ -434,6 +520,7 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
         <div><b>Bebestrom</b><span>Το βρεφικό στρώμα που ξέρουν τα καταστήματα σε όλη την Ελλάδα.</span></div>
         <div><b>Το showroom</b><span>Πάνω από το εργαστήριο, για να δοκιμάζεις πριν αγοράσεις.</span></div>
         <div><b>Σήμερα</b><span>Το eshop μας, με τα ίδια χέρια πίσω από κάθε παραγγελία.</span></div>
+        <div><b>Η υπογραφή μας</b><span>Κάθε στρώμα έχει ετικέτα με το όνομα του τεχνίτη που το έραψε και την ημερομηνία.</span></div>
       </div>
     </div>
   </div>
@@ -445,8 +532,14 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
       <div class="map"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M0 200 Q120 150 220 190 T400 160" stroke="#fff" stroke-width="14" fill="none"/><path d="M150 0 L190 300" stroke="#fff" stroke-width="10"/><path d="M0 80 L400 110" stroke="#fff" stroke-width="6"/><circle cx="180" cy="180" r="34" fill="#c9a96a" opacity=".25"/><path d="M180 150c-14 0-24 10-24 23 0 17 24 37 24 37s24-20 24-37c0-13-10-23-24-23Z" fill="#16213a"/><circle cx="180" cy="173" r="8" fill="#c9a96a"/></svg></div>
       <div class="txt">
         <div class="eyebrow">Showroom</div>
-        <h2 class="sec-h" style="font-size:clamp(28px,4vw,38px)">Έλα να ξαπλώσεις πριν αποφασίσεις.</h2>
-        <p class="lead" style="font-size:16px">Κλείσε ραντεβού και σε περιμένουμε, χωρίς βιασύνη και χωρίς δέσμευση. Διεύθυνση και ωράριο: <i>θα συμπληρωθούν</i>.</p>
+        <h2 class="sec-h" style="font-size:clamp(28px,4vw,38px)">Ιδιωτική δοκιμή ύπνου, πάνω από το εργαστήριο.</h2>
+        <div class="visit">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 λεπτά μόνο για σένα, ξαπλώνεις σε όποιο στρώμα θέλεις</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg>Φέρε το δικό σου μαξιλάρι, για να νιώσεις όπως στο σπίτι</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V9l7-5 7 5v12"/></svg>Κατεβαίνεις στο εργαστήριο και βλέπεις πώς ράβεται το στρώμα σου</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 12 5 5 9-10"/></svg>Χωρίς πίεση πωλητή, χωρίς δέσμευση</div>
+        </div>
+        <p style="font-size:14px;color:var(--muted)">Διεύθυνση και ωράριο: <i>θα συμπληρωθούν</i>.</p>
         <div class="slots" id="slots"><button>Δευ 10:00</button><button>Δευ 18:00</button><button>Τρι 11:00</button><button>Τετ 17:30</button><button>Σάβ 11:00</button></div>
         <button class="btn btn-dark" onclick="toast('Το ραντεβού σου καταχωρήθηκε (δείγμα)')">Κλείσε ραντεβού</button>
       </div>
@@ -460,8 +553,9 @@ footer.site{background:var(--night);color:#cfc7b6;font-size:14px;padding:56px 0 
     <div class="faq">
       <details><summary>Πόσο γρήγορα θα έρθει το στρώμα μου;</summary><p>Τα στάνταρ μεγέθη σε 3–5 εργάσιμες. Οι ειδικές διαστάσεις σε 7–10 εργάσιμες, γιατί τις ράβουμε για σένα.</p></details>
       <details><summary>Παίρνετε το παλιό μου στρώμα;</summary><p>Ναι. Με την παράδοση παίρνουμε το παλιό στρώμα χωρίς χρέωση, και το στέλνουμε για ανακύκλωση.</p></details>
+      <details><summary>Τι γίνεται αν δεν μου ταιριάξει;</summary><p>Έχεις 60 νύχτες δοκιμή. Μετά τις πρώτες 30, αν δεν σου κάνει, αλλάζουμε τη στρώση άνεσης στο εργαστήριό μας ή σου δίνουμε άλλο μοντέλο.</p></details>
       <details><summary>Πώς διαλέγω σκληρότητα;</summary><p>Κάνε το <a href="#quiz" style="text-decoration:underline">quiz</a> ή έλα στο showroom. Γενικά: πλάγιος ύπνος θέλει πιο μαλακό, ανάσκελα και πόνοι στη μέση θέλουν πιο σταθερό.</p></details>
-      <details><summary>Μπορώ να πληρώσω με δόσεις;</summary><p>Ναι, έως 36 άτοκες δόσεις με πιστωτική κάρτα. Δεχόμαστε επίσης Apple Pay, Google Pay, IRIS, αντικαταβολή και πληρωμή στο showroom.</p></details>
+      <details><summary>Μπορώ να πληρώσω με δόσεις;</summary><p>Ναι, έως 36 άτοκες δόσεις με πιστωτική κάρτα. Ή «αγόρασε τώρα, πλήρωσε αργότερα» σε δόσεις μέσω τράπεζας, χωρίς πιστωτική. Δεχόμαστε επίσης Apple Pay, Google Pay, IRIS, αντικαταβολή και πληρωμή στο showroom.</p></details>
       <details><summary>Πουλάτε σε καταστήματα;</summary><p>Ναι. Τα καταστήματα μπορούν να ανοίξουν λογαριασμό χονδρικής και να βλέπουν τιμές χονδρικής για όλη τη σειρά Bebestrom.</p></details>
     </div>
   </div>

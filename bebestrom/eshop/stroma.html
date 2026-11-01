@@ -128,6 +128,7 @@ section{padding:72px 0}
 .qty .q button{width:44px;height:48px;font-size:20px}
 .qty .q span{min-width:26px;text-align:center;font-weight:600}
 .qty .btn{flex:1}
+.bnd{display:flex;gap:12px;align-items:flex-start;background:var(--cream);border-radius:12px;padding:12px 14px;margin-top:14px;font-size:14px;cursor:pointer}.bnd input{width:20px;height:20px;margin-top:2px;accent-color:var(--night)}
 .deliv{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-top:14px;color:var(--muted)}
 .deliv svg{width:22px;flex:none;color:var(--ok)}
 .deliv b{color:var(--ink)}
@@ -196,7 +197,7 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
 </head>
 <body>
 <div class="demo">Δείγμα σχεδίου · Το όνομα, οι τιμές και τα κείμενα είναι ενδεικτικά</div>
-<div class="ann"><div class="wrap"><span>Δωρεάν παράδοση σε όλη την Ελλάδα</span><span>·</span><span>Έως 36 άτοκες δόσεις</span><span>·</span><span>Ειδικές διαστάσεις χωρίς χρέωση</span></div></div>
+<div class="ann"><div class="wrap"><span>Δωρεάν παράδοση σε όλη την Ελλάδα</span><span>·</span><span>Έως 36 άτοκες δόσεις</span><span>·</span><span>Ειδικές διαστάσεις χωρίς χρέωση</span><span>·</span><span>60 νύχτες δοκιμή στο σπίτι</span></div></div>
 <header class="site">
   <div class="wrap">
     <a href="index.html" class="burger icons" aria-label="Πίσω στην αρχική"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="24" height="24"><path d="M15 5l-7 7 7 7"/></svg></a>
@@ -223,7 +224,7 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
       <div class="eyebrow">Latex & κοκοφοίνικας · 26 cm</div>
       <h1>Σελήνη</h1>
       <p class="sub">Δροσερό, ελαστικό και σταθερό. Φυσικό latex πάνω και κάτω, κοκοφοίνικας στη μέση, ραμμένο στο χέρι στο εργαστήριό μας.</p>
-      <div class="badges"><span>Χειροποίητο</span><span>Φυσικά υλικά</span><span>Δύο όψεις</span><span>Αφαιρούμενο κάλυμμα</span></div>
+      <div class="badges"><span>Υπογραφή τεχνίτη</span><span>Χειροποίητο</span><span>Φυσικά υλικά</span><span>Δύο όψεις</span><span>Αφαιρούμενο κάλυμμα</span></div>
 
       <div class="fscale">
         <div class="lab"><span>Μαλακό</span><span>Σκληρό</span></div>
@@ -253,12 +254,13 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
           <div class="q"><button aria-label="Λιγότερα" onclick="setQ(-1)">−</button><span id="qn">1</span><button aria-label="Περισσότερα" onclick="setQ(1)">+</button></div>
           <button class="btn btn-dark" id="addBtn" onclick="add()">Προσθήκη στο καλάθι</button>
         </div>
+        <label class="bnd"><input type="checkbox" id="bnd"> <span><b>Κάν' το σετ ύπνου, −10%</b><br>+ 2 μαξιλάρια latex + αδιάβροχο προστατευτικό</span></label>
         <div class="deliv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><span>Παράδοση <b id="dd"></b>, δωρεάν. Μαζί παίρνουμε και το παλιό σου στρώμα.</span></div>
         <div class="perks">
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5Z"/></svg>10 χρόνια εγγύηση</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12"/></svg>Δοκιμή στο showroom</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12"/></svg>60 νύχτες δοκιμή</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>Έως 36 άτοκες δόσεις</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 3 6.2M4 19v-5h5"/></svg>Επιστροφή σε 14 ημέρες</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 3 6.2M4 19v-5h5"/></svg>Αλλαγή σκληρότητας</div>
         </div>
       </div>
 
@@ -267,6 +269,7 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
         <details><summary>Υλικά & στρώσεις</summary><div class="c">Από πάνω προς τα κάτω: βαμβακερό καπιτονέ κάλυμμα · 6 cm φυσικό latex · 4 cm κοκοφοίνικας · 6 cm φυσικό latex · βαμβακερό καπιτονέ κάλυμμα.</div></details>
         <details><summary>Τεχνικά στοιχεία</summary><div class="c"><table><tr><td>Ύψος</td><td>26 cm</td></tr><tr><td>Σκληρότητα</td><td>6/10</td></tr><tr><td>Όψεις</td><td>2</td></tr><tr><td>Κάλυμμα</td><td>Βαμβάκι, αφαιρούμενο</td></tr><tr><td>Κατασκευή</td><td>Χειροποίητο, Ελλάδα</td></tr><tr><td>Εγγύηση</td><td>10 χρόνια</td></tr></table></div></details>
         <details><summary>Φροντίδα</summary><div class="c">Γύρισμα κάθε 3 μήνες τους πρώτους 6 μήνες, μετά κάθε 6. Αερισμός του δωματίου. Το κάλυμμα πλένεται στους 30°.</div></details>
+        <details><summary>60 νύχτες δοκιμή & εγγύηση άνεσης</summary><div class="c">Κοιμήσου στη Σελήνη τουλάχιστον 30 νύχτες. Αν μέχρι τη 60ή νύχτα δεν σου ταιριάζει, έρχεται ο τεχνίτης μας: αλλάζουμε τη στρώση άνεσης στο εργαστήριο ή σου δίνουμε άλλο μοντέλο.</div></details>
         <details><summary>Αποστολή & επιστροφές</summary><div class="c">Δωρεάν παράδοση σε όλη την Ελλάδα με δικό μας συνεργείο, και δωρεάν απόσυρση του παλιού στρώματος. Επιστροφή σε 14 ημέρες για στάνταρ διαστάσεις. Οι ειδικές διαστάσεις φτιάχνονται για σένα και δεν επιστρέφονται.</div></details>
       </div>
     </div>
@@ -297,6 +300,7 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
           <tr><td>Βασικό υλικό</td><td class="cur">Latex & κοκοφοίνικας</td><td>Pocket & memory</td><td>Ελατήρια & κοκοφοίνικας</td></tr>
           <tr><td>Ιδανικό για</td><td class="cur">Ανάσκελα, μικτό</td><td>Πλάγιο ύπνο</td><td>Πόνους μέσης</td></tr>
           <tr><td>Δροσιά</td><td class="cur">●●●●●</td><td>●●●</td><td>●●●●</td></tr>
+          <tr><td>Δύο όψεις</td><td class="cur">Ναι</td><td>Όχι</td><td>Ναι</td></tr>
           <tr><td>Ύψος</td><td class="cur">26 cm</td><td>28 cm</td><td>24 cm</td></tr>
           <tr><td>Τιμή 160 × 200</td><td class="cur"><b>690 €</b></td><td>590 €</td><td>490 €</td></tr>
         </tbody>
@@ -331,15 +335,16 @@ footer.mini{background:var(--night);color:#9a9384;font-size:12px;text-align:cent
 <script>
 const BASE=690;let w=160,h=200,q=1,items=[];
 const fmt=n=>n.toLocaleString('el-GR')+' €';
-function priceFor(w,h){return Math.round(BASE*(0.35+0.65*(w*h)/(160*200))/5)*5}
-function upd(){const p=priceFor(w,h)*q;price.textContent=fmt(p);sPrice.textContent=fmt(p);inst.textContent='ή 36 άτοκες δόσεις των '+(p/36).toFixed(2).replace('.',',')+' €';sizeLab.textContent=w+' × '+h;sSize.textContent=w+' × '+h;
+const BUNDLE=129;function priceFor(w,h){return Math.round(BASE*(0.35+0.65*(w*h)/(160*200))/5)*5}
+function total(){const m=priceFor(w,h)*q;return bnd.checked?Math.round((m+BUNDLE)*0.9/5)*5:m}
+function upd(){const p=total();price.textContent=fmt(p);sPrice.textContent=fmt(p);inst.textContent='ή 36 άτοκες δόσεις των '+(p/36).toFixed(2).replace('.',',')+' €';sizeLab.textContent=w+' × '+h;sSize.textContent=w+' × '+h;
  const custom=document.querySelector('#sizes .on').dataset.c;const d=new Date();const add=(n)=>{const x=new Date(d);let k=0;while(k<n){x.setDate(x.getDate()+1);if(x.getDay()%6)k++}return x};
  const o={weekday:'short',day:'numeric',month:'short'};dd.textContent=custom?add(7).toLocaleDateString('el-GR',o)+' – '+add(10).toLocaleDateString('el-GR',o):add(3).toLocaleDateString('el-GR',o)+' – '+add(5).toLocaleDateString('el-GR',o)}
 document.querySelectorAll('#sizes button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#sizes button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
  if(b.dataset.c){custbox.classList.add('show');w=+cw.value;h=+ch.value}else{custbox.classList.remove('show');w=+b.dataset.w;h=+b.dataset.h}upd()});
 ['cw','ch'].forEach(i=>document.getElementById(i).addEventListener('input',()=>{w=Math.min(220,Math.max(60,+cw.value||60));h=Math.min(220,Math.max(120,+ch.value||120));upd()}));
 function setQ(d){q=Math.max(1,Math.min(9,q+d));qn.textContent=q;upd()}
-function add(p,name){items.push(p?{n:name,s:'',p:p}:{n:'Στρώμα Σελήνη',s:w+' × '+h+' cm'+(q>1?' · ×'+q:''),p:priceFor(w,h)*q});render();openD()}
+function add(p,name){items.push(p?{n:name,s:'',p:p}:{n:bnd.checked?'Σετ ύπνου Σελήνη':'Στρώμα Σελήνη',s:w+' × '+h+' cm'+(q>1?' · ×'+q:'')+(bnd.checked?' · με 2 μαξιλάρια & προστατευτικό':''),p:total()});render();openD()}
 function render(){cartN.textContent=items.length;lines.innerHTML=items.map(i=>'<div class="line" style="margin-bottom:14px"><div class="th">'+document.querySelector('#gthumbs button svg').outerHTML+'</div><div style="flex:1"><b>'+i.n+'</b><span>'+i.s+'</span></div><b>'+fmt(i.p)+'</b></div>').join('');tot.textContent=fmt(items.reduce((a,i)=>a+i.p,0))}
 function openD(){ov.classList.add('show');drawer.classList.add('show')}
 function closeD(){ov.classList.remove('show');drawer.classList.remove('show')}
@@ -348,6 +353,7 @@ views[2]='<div style="text-align:center;color:#5f6370"><svg viewBox="0 0 80 80" 
 views[3]='<svg viewBox="0 0 300 240" width="100%" fill="none" font-family="Commissioner,sans-serif" font-size="13"><rect x="70" y="30" width="160" height="180" rx="6" fill="#fff" stroke="#16213a" stroke-width="1.5"/><path d="M70 18h160M50 30v180" stroke="#a8884a" stroke-dasharray="3 3"/><text x="150" y="13" text-anchor="middle" fill="#a8884a">πλάτος 90–180 cm</text><text x="40" y="120" text-anchor="middle" fill="#a8884a" transform="rotate(-90 40 120)">μήκος 190–200 cm</text><text x="150" y="125" text-anchor="middle" fill="#5f6370">ύψος 26 cm</text></svg>';
 document.querySelectorAll('#gthumbs button').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('#gthumbs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');gview.innerHTML=views[i];gview.style.width=i===1?'70%':'100%'});
 addEventListener('scroll',()=>sticky.classList.toggle('show',addBtn.getBoundingClientRect().bottom<0),{passive:true});
+bnd.addEventListener('change',upd);
 upd();
 </script>
 </body>
