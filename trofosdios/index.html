@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Τροφός Διός · Ελληνικό μέλι από τα δικά μας μελίσσια</title>
+<meta name="description" content="Μέλι έλατο βανίλια και θυμάρι από τα δικά μας μελίσσια στην Αργολίδα. Κάθε βάζο με κωδικό παρτίδας. Λιανική και χονδρική.">
+<meta name="theme-color" content="#16191c">
+<link rel="preload" as="image" href="img/hives.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,500&family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16191c; --ink2:#3c4247; --muted:#6c7276; --line:#e6e0d4; --paper:#faf7f1; --cream:#f2ebdd; --white:#fff;
+  --gold:#c9a24a; --gold2:#e3c57a; --honey:#d99a1e; --night:#16191c; --night2:#22272b;
+  --serif:"Literata",Georgia,serif; --sans:"Commissioner",system-ui,-apple-system,sans-serif;
+  --max:1160px; --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#9a7a2e}
+.sec{padding:76px 0}
+.sec-h{font-size:clamp(28px,4.6vw,44px);margin:10px 0 12px}
+.lead{color:var(--muted);max-width:640px;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--night)}
+.btn.line-w{background:transparent;border-color:rgba(255,255,255,.6);color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.vh{position:absolute;left:-9999px}
+.hexbg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%23c9a24a' stroke-opacity='.13' stroke-width='1.2'/%3E%3C/svg%3E")}
+
+.ribbon{background:#000;color:#cfc4a8;font-size:12.5px;text-align:center;padding:7px 12px}
+.top{background:var(--night2);font-size:13px;color:#d8cfb8;text-align:center;padding:8px 12px}
+.top b{color:var(--gold2)}
+
+header.nav{position:sticky;top:0;z-index:40;background:rgba(22,25,28,.96);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #2c3236}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--gold2)}
+.logo b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:25px;line-height:1}
+.logo small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#a9a08a;margin-top:3px;font-style:normal}
+.menu{display:flex;gap:24px;font-size:15px}
+.menu a{text-decoration:none;color:#d6d0c2}
+.menu a:hover{color:#fff}
+.cartbtn{position:relative;width:46px;height:46px;border-radius:50%;border:1px solid #3a4146;background:transparent;color:#fff;display:grid;place-items:center}
+.cartbtn span{position:absolute;top:-4px;right:-4px;background:var(--gold);color:var(--night);font-size:12px;font-weight:700;min-width:21px;height:21px;border-radius:11px;display:grid;place-items:center;padding:0 5px}
+@media(max-width:900px){.menu{display:none}}
+
+.hero{position:relative;color:#fff;min-height:min(86vh,720px);display:flex;align-items:flex-end;overflow:hidden;background:#3b2412}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,14,.15) 0%,rgba(10,12,14,.25) 40%,rgba(10,12,14,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:64px;width:100%}
+.hero .eyebrow{color:var(--gold2)}
+.hero h1{font-size:clamp(40px,7vw,78px);margin:12px 0 16px;max-width:820px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p.l{font-size:18px;max-width:560px;color:#ece6d8}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+.trust{background:var(--white);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.trust div{padding:20px 16px;display:flex;gap:12px;align-items:center;font-size:14px;color:var(--ink2);border-right:1px solid var(--line)}
+.trust div:last-child{border-right:0}
+.trust b{display:block;color:var(--ink);font-size:14.5px}
+.ic{flex:0 0 38px;height:38px;border-radius:50%;background:var(--cream);display:grid;place-items:center}
+@media(max-width:900px){.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.trust div:nth-child(2){border-right:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}.trust div{padding:16px 10px;font-size:13px}}
+
+.prods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:34px}
+@media(max-width:760px){.prods{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+@media(max-width:1000px){.card{grid-template-columns:minmax(0,1fr)}}
+.card .pic{position:relative;background:var(--night);min-height:300px}
+.card .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .pic svg{position:absolute;inset:0;margin:auto;height:86%}
+.card .tag{position:absolute;top:14px;left:14px;z-index:2;background:var(--gold);color:var(--night);font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:999px}
+.card .body{padding:22px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:26px}
+.card .sub{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#9a7a2e;font-weight:600}
+.card .notes{font-size:14.5px;color:var(--ink2)}
+.meter{display:grid;grid-template-columns:70px 1fr;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.meter i{height:5px;border-radius:3px;background:var(--cream);position:relative;overflow:hidden}
+.meter i::after{content:"";position:absolute;inset:0;width:var(--v);background:linear-gradient(90deg,var(--gold2),var(--honey));border-radius:3px}
+.pair{font-size:13.5px;color:var(--muted)}
+.pair b{color:var(--ink2)}
+.sizes{display:flex;gap:6px;margin-top:4px}
+.sizes button{flex:1;min-height:44px;border:1px solid var(--line);background:var(--paper);border-radius:10px;font-size:13.5px;color:var(--ink2)}
+.sizes button[aria-pressed="true"]{border-color:var(--ink);background:var(--white);color:var(--ink);font-weight:600}
+.buy{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px}
+.price{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.1}
+.price small{display:block;font-family:var(--sans);font-size:12px;color:var(--muted);font-weight:400}
+.add{min-height:48px;padding:0 20px;border-radius:999px;border:0;background:var(--ink);color:#fff;font-weight:600;font-size:14.5px}
+
+.vs{margin-top:22px;background:var(--cream);border-radius:22px;padding:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;font-size:14.5px}
+.vs h3{grid-column:1/-1;font-size:21px}
+.vs div{background:var(--white);border-radius:14px;padding:14px}
+.vs b{display:block;margin-bottom:4px}
+@media(max-width:760px){.vs{grid-template-columns:minmax(0,1fr)}}
+
+.trace{background:var(--night);color:#e9e3d6}
+.trace .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+.trace .eyebrow{color:var(--gold2)}
+.trace .lead{color:#b9b2a2}
+.lookup{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+.lookup input{flex:1;min-width:0;min-height:50px;border-radius:12px;border:1px solid #3a4146;background:#20252a;color:#fff;padding:0 16px;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+.lookup input::placeholder{color:#8d877a;letter-spacing:0;text-transform:none}
+.hint{font-size:13px;color:#a39c8d;margin-top:10px}
+.hint button{background:none;border:0;color:var(--gold2);text-decoration:underline;font-size:13px;padding:4px 2px;min-height:32px}
+.passport{background:#fbf6ea;color:var(--ink);border-radius:22px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.passport .head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:1px dashed #d8c9a6;padding-bottom:14px;margin-bottom:14px}
+.passport h3{font-size:22px}
+.passport .code{font-size:12px;letter-spacing:.12em;background:var(--ink);color:var(--gold2);padding:5px 10px;border-radius:8px;white-space:nowrap}
+.pp-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;font-size:14px}
+.pp-rows span{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pp-lab{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:10px 14px;flex-wrap:wrap}
+.pp-lab a{font-weight:600;color:#9a7a2e}
+.passport.err{outline:2px solid #c0462f}
+@media(max-width:900px){.trace .wrap{grid-template-columns:minmax(0,1fr)}}
+
+.journey{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:30px;counter-reset:j}
+.journey div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px;position:relative;font-size:13.5px;color:var(--muted)}
+.journey div.key{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.18)}
+.journey div::before{counter-increment:j;content:counter(j);position:absolute;top:12px;right:14px;font-family:var(--serif);font-size:22px;color:#d8cba9}
+.journey b{display:block;color:var(--ink);font-size:16px;margin:4px 0 2px}
+.journey small{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#9a7a2e;font-weight:600}
+@media(max-width:900px){.journey{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr);gap:28px}}
+.ph{border-radius:24px;overflow:hidden;background:var(--cream)}
+.ph img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.list{list-style:none;margin:18px 0 24px;display:grid;gap:10px}
+.list li{display:flex;gap:10px;font-size:15.5px}
+.list li::before{content:"";flex:0 0 18px;height:18px;margin-top:4px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l8 4.6v9.2L10 19l-8-4.2V5.6z' fill='%23c9a24a'/%3E%3Cpath d='M6 10l3 3 5-6' stroke='%2316191c' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat center/contain}
+
+.wax{background:var(--cream)}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+@media(max-width:760px){.wgrid{grid-template-columns:minmax(0,1fr)}}
+.wcard{background:var(--white);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.wcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.wcard div{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.wcard h3{font-size:20px}
+.wcard p{font-size:14px;color:var(--muted)}
+.wcard .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px;flex-direction:row;padding-left:0;padding-right:0;padding-bottom:0}
+
+.b2b{background:var(--night);color:#e9e3d6}
+.b2b .eyebrow{color:var(--gold2)}
+.b2b .lead{color:#b9b2a2}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.who span{border:1px solid #3a4146;border-radius:999px;padding:8px 14px;font-size:14px}
+.pack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.pack div{background:var(--night2);border:1px solid #30373c;border-radius:14px;padding:14px;font-size:13.5px;color:#b9b2a2}
+.pack b{display:block;color:#fff;font-size:15px}
+@media(max-width:520px){.pack{grid-template-columns:minmax(0,1fr)}}
+form.req{background:#fbf6ea;color:var(--ink);border-radius:22px;padding:24px;display:grid;gap:12px}
+form.req h3{font-size:22px}
+.f2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:520px){.f2{grid-template-columns:minmax(0,1fr)}}
+form.req label{font-size:13px;font-weight:600;color:var(--ink2);display:grid;gap:5px}
+form.req input,form.req select,form.req textarea{font:inherit;font-size:16px;min-height:48px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--white);width:100%}
+form.req textarea{min-height:90px;resize:vertical}
+form.req small{color:var(--muted);font-size:12.5px}
+
+.myth{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,26px);line-height:1.45;margin:18px 0;padding-left:18px;border-left:3px solid var(--gold)}
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
+.team div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center;font-size:13px;color:var(--muted)}
+.team b{display:block;color:var(--ink);font-size:15px}
+.ava{width:60px;height:60px;border-radius:50%;margin:0 auto 10px;background:var(--night);color:var(--gold2);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:22px}
+
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+@media(max-width:900px){.tiers{grid-template-columns:minmax(0,1fr)}}
+.tier{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px}
+.tier.best{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.2)}
+.tier .badge{align-self:flex-start;background:var(--gold);color:var(--night);font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px}
+.tier h3{font-size:22px}
+.tier .p{font-family:var(--serif);font-size:30px;font-weight:600}
+.tier .p small{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}
+.tier ul{list-style:none;display:grid;gap:7px;font-size:14.5px;color:var(--ink2);margin-bottom:8px}
+.tier ul li::before{content:"· ";color:var(--gold);font-weight:700}
+.tier .btn{margin-top:auto}
+
+.rev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+@media(max-width:900px){.rev{grid-template-columns:minmax(0,1fr)}}
+.rev div{border:1px dashed #d3c6a8;border-radius:var(--r);padding:22px;color:var(--muted);font-size:14.5px;background:var(--white)}
+
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:16.5px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;font-weight:400;color:var(--gold);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 18px;color:var(--ink2)}
+
+.news{background-color:var(--night);color:#fff;border-radius:28px;padding:40px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center}
+.news h2{font-size:clamp(26px,3.6vw,36px)}
+.news h2 em{color:var(--gold2)}
+.news p{color:#c4bdae;margin-top:8px}
+.news form{display:flex;gap:8px;flex-wrap:wrap}
+.news input{flex:1;min-width:0;min-height:50px;border-radius:999px;border:0;padding:0 20px;font-size:16px}
+@media(max-width:900px){.news{grid-template-columns:minmax(0,1fr);padding:28px}}
+footer{background:#0f1214;color:#b3ad9f;margin-top:76px;padding:56px 0 100px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .legal{border-top:1px solid #262c30;margin-top:36px;padding-top:20px;font-size:12.5px;color:#8a8478;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){footer .cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.drawer{position:fixed;inset:0;z-index:60;pointer-events:none}
+.drawer .bg{position:absolute;inset:0;background:rgba(10,12,14,.55);opacity:0;transition:opacity .25s}
+.drawer .box{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--paper);transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+.drawer.open{pointer-events:auto}
+.drawer.open .bg{opacity:1}
+.drawer.open .box{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh h3{font-size:22px}
+.x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--white);font-size:20px}
+.ship{padding:14px 20px;font-size:13.5px;color:var(--ink2);border-bottom:1px solid var(--line)}
+.bar{height:7px;background:var(--cream);border-radius:4px;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.it{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.it small{display:block;color:var(--muted)}
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+.df{padding:18px 20px;border-top:1px solid var(--line);background:var(--white)}
+.tot{display:flex;justify-content:space-between;font-weight:600;margin-bottom:12px}
+.pay{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:45;display:none;background:var(--night);color:#fff;border-radius:16px;padding:10px 10px 10px 18px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}
+.sticky.show{display:flex}
+.toast{position:fixed;left:50%;bottom:86px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;opacity:0;transition:.25s;z-index:70;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Δείγμα σχεδίου για συζήτηση · τιμές, ποσότητες και κείμενα είναι ενδεικτικά</div>
+<div class="top">Δωρεάν αποστολή από <b>40 €</b> · Αποστολή σε 1–2 εργάσιμες · <a href="#xondriki" style="color:#fff">Χονδρική για επαγγελματίες →</a></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Τροφός Διός, αρχική">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="23" rx="7" ry="10" fill="#c9a24a"/><path d="M13.5 20h13M13 24h14M14 28h12" stroke="#16191c" stroke-width="1.6"/><ellipse cx="11" cy="15" rx="8" ry="5" fill="none" stroke="#e3c57a" stroke-width="1.4" transform="rotate(-25 11 15)"/><ellipse cx="29" cy="15" rx="8" ry="5" fill="none" stroke="#e3c57a" stroke-width="1.4" transform="rotate(25 29 15)"/><circle cx="20" cy="11" r="3.4" fill="#c9a24a"/><path d="M15 6l3 2.4 2-3 2 3 3-2.4-1 4h-8z" fill="#e3c57a"/></svg>
+      <span><b>Τροφός Διός</b><small>Μελισσοκομείο</small></span>
+    </a>
+    <nav class="menu" aria-label="Κύριο μενού">
+      <a href="#meli">Μέλι</a>
+      <a href="#keri">Κερί &amp; λαμπάδες</a>
+      <a href="#kodikos">Ο κωδικός του βάζου</a>
+      <a href="#xondriki">Χονδρική</a>
+      <a href="#emeis">Ποιοι είμαστε</a>
+    </nav>
+    <button class="cartbtn" id="openCart" aria-label="Καλάθι">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+      <span id="count">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <img src="img/hives.webp" alt="Οι κυψέλες μας ανάμεσα σε ανθισμένα θυμάρια, στο ηλιοβασίλεμα" width="750" height="659" fetchpriority="high">
+  <div class="wrap">
+    <div class="eyebrow">Ελληνικό μέλι · Αργολίδα</div>
+    <h1>Το μέλι που τάισε <em>τον Δία.</em><br>Από τα δικά μας μελίσσια.</h1>
+    <p class="l">Είμαστε νέα παιδιά από το Άργος. Φροντίζουμε μόνοι μας τις κυψέλες μας, τις ακολουθούμε από ανθοφορία σε ανθοφορία και γεμίζουμε κάθε βάζο με τα χέρια μας.</p>
+    <div class="cta">
+      <a class="btn gold" href="#meli">Δες τα μέλια μας</a>
+      <a class="btn line-w" href="#xondriki">Χονδρική για επαγγελματίες</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Γιατί Τροφός Διός">
+  <div class="wrap">
+    <div><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a7a2e" stroke-width="1.8"><path d="M12 2l8 4.6v10.8L12 22l-8-4.6V6.6z"/></svg></span><span><b>Δικά μας μελίσσια</b>Χωρίς μεσάζοντες</span></div>
+    <div><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a7a2e" stroke-width="1.8"><path d="M9 3v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V3M8 3h8"/></svg></span><span><b>Ανάλυση σε κάθε παρτίδα</b>Δες την με τον κωδικό</span></div>
+    <div><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a7a2e" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><span><b>Σε 1–2 εργάσιμες</b>Σε όλη την Ελλάδα</span></div>
+    <div><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a7a2e" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3-6.2M20 4v5h-5"/></svg></span><span><b>Σπασμένο βάζο;</b>Σου στέλνουμε νέο</span></div>
+  </div>
+</section>
+
+<section class="sec" id="meli">
+  <div class="wrap">
+    <div class="eyebrow">Τα μέλια μας</div>
+    <h2 class="sec-h">Δύο μέλια. Δύο χαρακτήρες.</h2>
+    <p class="lead">Δεν φτιάχνουμε δεκάδες ετικέτες. Δύο μέλια που ξέρουμε καλά και τα τρυγάμε μόνο όταν είναι έτοιμα.</p>
+    <div class="prods" id="prods"></div>
+    <div class="vs">
+      <h3>Έλατο βανίλια ή θυμάρι;</h3>
+      <div><b>Θες κάτι ήπιο, για κάθε μέρα</b>Έλατο βανίλια. Λίγο γλυκό, βελούδινο, ταιριάζει παντού και αρέσει και στα παιδιά.</div>
+      <div><b>Θες έντονο άρωμα</b>Θυμάρι. Το κλασικό ελληνικό μέλι, πικάντικο, για γιαούρτι, τσάι και τυριά.</div>
+      <div><b>Δεν μπορείς να διαλέξεις</b>Πάρε το <a href="#dora">καφάσι με τα δύο</a>, με κάρτα που εξηγεί πώς να τα δοκιμάσεις.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec trace hexbg" id="kodikos">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Ο κωδικός του βάζου</div>
+      <h2 class="sec-h">Μην μας πιστεύεις στον λόγο μας. Έλεγξέ το.</h2>
+      <p class="lead">Στην ετικέτα κάθε βάζου υπάρχει κωδικός παρτίδας και QR. Σκάναρέ το ή γράψε τον κωδικό εδώ και θα δεις σε ποιο μελισσοκομείο έγινε το μέλι, πότε τρυγήθηκε και τι έδειξε η ανάλυση του εργαστηρίου.</p>
+      <form class="lookup" id="lookup" autocomplete="off">
+        <label for="code" class="vh">Κωδικός παρτίδας</label>
+        <input id="code" name="code" placeholder="π.χ. ΤΔ-ΕΛ-0826" maxlength="12">
+        <button class="btn gold" type="submit">Έλεγχος</button>
+      </form>
+      <p class="hint">Δοκίμασε: <button type="button" data-c="ΤΔ-ΕΛ-0826">ΤΔ-ΕΛ-0826</button> · <button type="button" data-c="ΤΔ-ΘΥ-0726">ΤΔ-ΘΥ-0726</button></p>
+    </div>
+    <div class="passport" id="passport" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="sec" id="taxidi">
+  <div class="wrap">
+    <div class="eyebrow">Ένας χρόνος με τις μέλισσες</div>
+    <h2 class="sec-h">Ακολουθούμε τις ανθοφορίες</h2>
+    <p class="lead">Οι κυψέλες μας δεν μένουν σε ένα σημείο. Τις μεταφέρουμε εκεί που ανθίζει κάθε εποχή, από τον κάμπο του Άργους ως τα έλατα του βουνού.</p>
+    <div class="journey">
+      <div><small>Άνοιξη</small><b>Ασφάκα</b>Το πρώτο τραπέζι των μελισσών μετά τον χειμώνα.</div>
+      <div><small>Απρίλιος</small><b>Πορτοκαλιά</b>Οι πορτοκαλεώνες του αργολικού κάμπου.</div>
+      <div class="key"><small>Καλοκαίρι</small><b>Θυμάρι</b>Οι λόφοι της Αργολίδας γεμίζουν μωβ.</div>
+      <div class="key"><small>Καλοκαίρι</small><b>Έλατο</b>Στο βουνό, για το έλατο βανίλια.</div>
+      <div><small>Φθινόπωρο</small><b>Βελανιδιά</b>Οι μέλισσες ετοιμάζονται για τον χειμώνα.</div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:12px">Τη σειρά και τους μήνες θα τους συμπληρώσουν τα παιδιά.</p>
+  </div>
+</section>
+
+<section class="sec" id="dora" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap split">
+    <div class="ph"><img src="img/trio.webp" alt="Βάζα Τροφός Διός σε ξύλινο καφάσι δώρου" width="750" height="735" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">Δώρα</div>
+      <h2 class="sec-h">Ξύλινο καφάσι δώρου</h2>
+      <p class="lead">Τα μέλια μας σε ξύλινο καφάσι, έτοιμα για δώρο. Για γιορτές, για ένα ευχαριστώ ή για εταιρικά δώρα με τη δική σας κάρτα.</p>
+      <ul class="list">
+        <li>Έλατο βανίλια 450 g + θυμάρι 450 g</li>
+        <li>Κάρτα γευσιγνωσίας και ιδέες συνδυασμών</li>
+        <li>Ευχετήρια κάρτα με το μήνυμά σου, δωρεάν</li>
+        <li>Αποστολή απευθείας σε όποιον το κάνεις δώρο</li>
+      </ul>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <span class="price">29,90 €</span>
+        <button class="btn" data-add="Καφάσι δώρου (έλατο + θυμάρι)|29.9">Προσθήκη στο καλάθι</button>
+      </div>
+      <p style="font-size:13.5px;color:var(--muted);margin-top:14px">Εταιρικά δώρα από 20 τεμάχια: <a href="#xondriki">ζήτησε τιμή</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec wax" id="keri">
+  <div class="wrap">
+    <div class="eyebrow">Από κερί μέλισσας</div>
+    <h2 class="sec-h">Λαμπάδες και κερί από τις κυψέλες μας</h2>
+    <p class="lead">Το κερί δεν πάει χαμένο. Λαμπάδες από φύλλο κεριού, στολισμένες στο χέρι, και καθαρό κερί μέλισσας σε κομμάτια.</p>
+    <div class="wgrid">
+      <article class="wcard"><img src="img/candles.webp" alt="Λαμπάδες από κερί μέλισσας με δαντέλα και αποξηραμένα λουλούδια" width="750" height="736" loading="lazy"><div><h3>Πασχαλινές λαμπάδες</h3><p>Από 100% κερί μέλισσας, κάθε μία στολισμένη στο χέρι. Προπαραγγελία για το Πάσχα.</p><div class="row"><span class="price" style="font-size:21px">από 12 €</span><button class="add" data-add="Λαμπάδα κερί μέλισσας|12">Προπαραγγελία</button></div></div></article>
+      <article class="wcard"><img src="img/candle-easter.webp" alt="Λαμπάδα κεριού με ροζ κορδέλες" width="280" height="713" loading="lazy" style="object-position:center 30%"><div><h3>Λαμπάδες νονού</h3><p>Στολισμός κατά παραγγελία: πες μας χρώματα και το όνομα του παιδιού.</p><div class="row"><span class="price" style="font-size:21px">κατόπιν τιμής</span><a class="btn ghost" href="#xondriki" style="min-height:44px">Ρώτησέ μας</a></div></div></article>
+      <article class="wcard"><img src="img/wax.webp" alt="Πλάκες καθαρού κεριού μέλισσας" width="750" height="732" loading="lazy"><div><h3>Κερί μέλισσας</h3><p>Καθαρό κερί σε κομμάτια, για κεριά, αλοιφές και περιποίηση ξύλου.</p><div class="row"><span class="price" style="font-size:21px">9 € / 500 g</span><button class="add" data-add="Κερί μέλισσας 500 g|9">Στο καλάθι</button></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec b2b hexbg" id="xondriki">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <div class="eyebrow">Χονδρική</div>
+      <h2 class="sec-h">Για μαγαζιά, εστίαση και ξενοδοχεία</h2>
+      <p class="lead">Δίνουμε το μέλι μας και σε επαγγελματίες, με σταθερή ποιότητα, ανάλυση σε κάθε παρτίδα και τιμολόγιο.</p>
+      <div class="who"><span>Delicatessen &amp; παντοπωλεία</span><span>Φούρνοι &amp; ζαχαροπλαστεία</span><span>Εστιατόρια &amp; καφέ</span><span>Ξενοδοχεία (πρωινό)</span><span>Εταιρικά δώρα</span></div>
+      <div class="pack">
+        <div><b>Βάζα σε κιβώτιο</b>12 × 450 g, με την ετικέτα μας</div>
+        <div><b>Δοχεία</b>για κουζίνα και ζαχαροπλαστική</div>
+        <div><b>Δική σας ετικέτα</b>για δώρα και ξενοδοχεία</div>
+      </div>
+      <p style="font-size:13.5px;color:#9e978a;margin-top:16px">Οι επαγγελματίες με λογαριασμό βλέπουν τις τιμές χονδρικής μέσα στο eshop και παραγγέλνουν μόνοι τους.</p>
+    </div>
+    <form class="req" id="req">
+      <h3>Ζήτησε τιμοκατάλογο</h3>
+      <div class="f2">
+        <label>Όνομα επιχείρησης<input required name="biz" autocomplete="organization"></label>
+        <label>Είδος<select name="type"><option>Delicatessen / παντοπωλείο</option><option>Φούρνος / ζαχαροπλαστείο</option><option>Εστιατόριο / καφέ</option><option>Ξενοδοχείο</option><option>Εταιρικά δώρα</option><option>Άλλο</option></select></label>
+        <label>Τηλέφωνο<input required type="tel" name="tel" autocomplete="tel"></label>
+        <label>Email<input required type="email" name="email" autocomplete="email"></label>
+      </div>
+      <label>Τι σας ενδιαφέρει;<textarea name="msg" placeholder="π.χ. θυμάρι σε δοχείο, περίπου 30 κιλά τον μήνα"></textarea></label>
+      <button class="btn">Αποστολή</button>
+      <small>Απαντάμε μέσα σε μία εργάσιμη.</small>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="emeis">
+  <div class="wrap split">
+    <div class="ph"><img src="img/thyme-tea.webp" alt="Βάζο θυμαρίσιο Τροφός Διός δίπλα σε φλιτζάνι τσάι του βουνού και αναμμένο τζάκι" width="743" height="723" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">Ποιοι είμαστε</div>
+      <h2 class="sec-h">Γιατί «Τροφός Διός»</h2>
+      <p class="myth">Λέει ο μύθος πως, όταν η Ρέα έκρυψε τον μικρό Δία σε μια σπηλιά, τον μεγάλωσαν οι μέλισσες με το μέλι τους.</p>
+      <p class="lead">Από εκεί πήραμε το όνομα. Είμαστε νέα παιδιά από το Άργος και αποφασίσαμε να μείνουμε στον τόπο μας και να κάνουμε κάτι δικό μας. Αφήνουμε στις μέλισσες το μέλι που χρειάζονται και τρυγάμε μόνο ό,τι περισσεύει.</p>
+      <div class="team">
+        <div><span class="ava">Α</span><b>Όνομα</b>Μελισσοκόμος</div>
+        <div><span class="ava">Β</span><b>Όνομα</b>Μελισσοκόμος</div>
+        <div><span class="ava">Γ</span><b>Όνομα</b>Συσκευασία</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="yiothesia" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Ιδέα για αργότερα · Υιοθέτησε μια κυψέλη</div>
+    <h2 class="sec-h">Μια κυψέλη με το όνομά σου</h2>
+    <p class="lead">Ταμπελάκι με το όνομά σου σε μια από τις κυψέλες μας, νέα και φωτογραφίες σε κάθε εποχή και το μέλι της στο σπίτι σου. Ιδανικό δώρο.</p>
+    <div class="tiers">
+      <div class="tier"><h3>Φίλος της κυψέλης</h3><div class="p">39 € <small>/ χρόνο</small></div><ul><li>Ψηφιακό πιστοποιητικό</li><li>Νέα 4 φορές τον χρόνο</li><li>1 βάζο 450 g</li></ul><button class="btn ghost" data-add="Υιοθεσία · Φίλος|39">Επιλογή</button></div>
+      <div class="tier best"><span class="badge">Το πιο δημοφιλές δώρο</span><h3>Νονός της κυψέλης</h3><div class="p">79 € <small>/ χρόνο</small></div><ul><li>Ταμπελάκι με το όνομα πάνω στην κυψέλη</li><li>Πιστοποιητικό σε κουτί δώρου</li><li>Έλατο + θυμάρι 450 g</li><li>Φωτογραφίες και βίντεο</li></ul><button class="btn" data-add="Υιοθεσία · Νονός|79">Επιλογή</button></div>
+      <div class="tier"><h3>Μελισσοκόμος για μια μέρα</h3><div class="p">129 € <small>/ χρόνο</small></div><ul><li>Ό,τι έχει ο «Νονός»</li><li>Επίσκεψη στα μελίσσια με στολή</li><li>Τρύγος και γευσιγνωσία μαζί μας</li></ul><button class="btn ghost" data-add="Υιοθεσία · Μελισσοκόμος|129">Επιλογή</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Κριτικές</div>
+    <h2 class="sec-h">Τι λένε όσοι το δοκίμασαν</h2>
+    <div class="rev">
+      <div>Εδώ μπαίνουν <b>μόνο αληθινές</b> κριτικές, από επιβεβαιωμένες αγορές ή από το Google.</div>
+      <div>Ζητάμε κριτική με email 10 μέρες μετά την παράδοση, όταν ο πελάτης έχει δοκιμάσει το μέλι.</div>
+      <div>Καμία ψεύτικη κριτική. Όλο το brand στηρίζεται στην εμπιστοσύνη.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:10px">
+  <div class="wrap">
+    <div class="eyebrow">Ερωτήσεις</div>
+    <h2 class="sec-h">Ό,τι ρωτάνε συνήθως</h2>
+    <div class="faq">
+      <details><summary>Γιατί το έλατο βανίλια δεν κρυσταλλώνει;</summary><p>Επειδή έχει φυσικά λίγη γλυκόζη. Μένει ρευστό για πολύ καιρό, ακόμα και πάνω από χρόνο. Είναι ένα από τα σημάδια του γνήσιου μελιού ελάτης.</p></details>
+      <details><summary>Το θυμαρίσιο κρυστάλλωσε. Χάλασε;</summary><p>Όχι. Το γνήσιο θυμαρίσιο κρυσταλλώνει φυσικά μέσα σε λίγους μήνες. Βάλε το βάζο σε ζεστό νερό, κάτω από 40 °C, και ανακάτεψε. Όχι στα μικροκύματα.</p></details>
+      <details><summary>Το μέλι σας είναι ζεσταμένο ή φιλτραρισμένο;</summary><p>Όχι. Το περνάμε μόνο από απλό σουρωτήρι για να φύγουν κομμάτια κεριού και το βάζουμε στο βάζο όπως βγήκε από την κυψέλη.</p></details>
+      <details><summary>Πώς ξέρω ότι είναι πραγματικά έλατο ή θυμάρι;</summary><p>Κάθε παρτίδα περνά ανάλυση σε διαπιστευμένο εργαστήριο. Τα αποτελέσματα τα βλέπεις με τον κωδικό του βάζου σου.</p></details>
+      <details><summary>Μπορούν να φάνε μέλι τα μωρά;</summary><p>Όχι πριν κλείσουν τους 12 μήνες. Αυτό ισχύει για κάθε μέλι.</p></details>
+      <details><summary>Κάνετε χονδρική;</summary><p>Ναι, σε μαγαζιά, εστίαση, ξενοδοχεία και για εταιρικά δώρα. <a href="#xondriki">Ζήτησε τιμοκατάλογο</a> και σου απαντάμε μέσα σε μία εργάσιμη.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="news hexbg">
+    <div>
+      <h2>Μάθε πρώτος για <em>κάθε νέο τρύγο</em></h2>
+      <p>Ένα email σε κάθε τρύγο και 10% έκπτωση στην πρώτη σου παραγγελία. Τίποτα άλλο.</p>
+    </div>
+    <form id="nl">
+      <label for="em" class="vh">Email</label>
+      <input id="em" type="email" required placeholder="Το email σου" autocomplete="email">
+      <button class="btn gold">Εγγραφή</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo" href="#"><span><b>Τροφός Διός</b><small>Μελισσοκομείο · Άργος</small></span></a>
+        <p style="margin-top:12px;max-width:280px">Ελληνικό μέλι από τα δικά μας μελίσσια, με κωδικό σε κάθε βάζο.</p>
+      </div>
+      <div><h4>Κατάστημα</h4><ul><li><a href="#meli">Μέλι</a></li><li><a href="#dora">Δώρα</a></li><li><a href="#keri">Κερί &amp; λαμπάδες</a></li><li><a href="#xondriki">Χονδρική</a></li></ul></div>
+      <div><h4>Βοήθεια</h4><ul><li><a href="#">Αποστολές &amp; πληρωμές</a></li><li><a href="#">Επιστροφές</a></li><li><a href="#kodikos">Έλεγχος κωδικού</a></li><li><a href="#faq">Ερωτήσεις</a></li></ul></div>
+      <div><h4>Επικοινωνία</h4><ul><li>Άργος, Αργολίδα</li><li><a href="#">Τηλέφωνο</a></li><li><a href="#">Email</a></li><li><a href="#">Instagram @trofosdios</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Τροφός Διός · Επωνυμία · ΑΦΜ · ΓΕΜΗ · Αρ. μητρώου μελισσοκόμου</span><span><a href="#">Πολιτική απορρήτου</a> · <a href="#">Cookies</a> · <a href="#">Όροι χρήσης</a></span></div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><span id="stickyTxt">0 προϊόντα · 0,00 €</span><button class="btn gold" id="stickyBtn" style="min-height:44px">Καλάθι</button></div>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="bg" data-close></div>
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="ch">
+    <div class="dh"><h3 id="ch">Το καλάθι σου</h3><button class="x" data-close aria-label="Κλείσιμο">×</button></div>
+    <div class="ship"><span id="shipTxt"></span><div class="bar"><i id="shipBar"></i></div></div>
+    <div class="items" id="items"></div>
+    <div class="df"><div class="tot"><span>Σύνολο</span><span id="total">0,00 €</span></div><button class="btn" style="width:100%">Ολοκλήρωση παραγγελίας</button><p class="pay">Κάρτα · Apple Pay · Google Pay · IRIS · Αντικαταβολή</p></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const fmt=v=>v.toFixed(2).replace(".",",")+" €";
+function jarSvg(name,en,c1,c2){return `<svg viewBox="0 0 200 260" aria-hidden="true"><defs><linearGradient id="jg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><ellipse cx="100" cy="248" rx="70" ry="7" fill="#000" opacity=".35"/><rect x="40" y="14" width="120" height="34" rx="8" fill="#0d0f11"/><path d="M36 52h128c6 0 10 4 10 10v166c0 10-8 18-18 18H44c-10 0-18-8-18-18V62c0-6 4-10 10-10z" fill="url(#jg)"/><rect x="26" y="96" width="148" height="110" fill="#1d2226"/><g fill="none" stroke="#c9a24a" stroke-opacity=".25"><path d="M40 110l8 4.6v9.2l-8 4.6-8-4.6v-9.2zM160 180l8 4.6v9.2l-8 4.6-8-4.6v-9.2z"/></g><text x="100" y="114" text-anchor="middle" font-family="Commissioner,sans-serif" font-size="7" letter-spacing="2" fill="#c9a24a">ΕΛΛΗΝΙΚΟ ΜΕΛΙ</text><ellipse cx="100" cy="132" rx="6" ry="9" fill="#c9a24a"/><text x="100" y="164" text-anchor="middle" font-family="Literata,serif" font-style="italic" font-size="22" fill="#e3c57a">Τροφός Διός</text><text x="100" y="186" text-anchor="middle" font-family="Commissioner,sans-serif" font-size="10" letter-spacing="1.5" fill="#e3c57a">${name}</text><text x="100" y="198" text-anchor="middle" font-family="Commissioner,sans-serif" font-size="6.5" letter-spacing="1.5" fill="#a99c7c">${en}</text><path d="M42 58h12v180h-4c-6 0-10-4-10-10z" fill="#fff" opacity=".18"/></svg>`}
+const P=[
+ {n:"Έλατο Βανίλια",sub:"Μέλι ελάτης",tag:"Νέος τρύγος",svg:jarSvg("ΕΛΑΤΟ ΒΑΝΙΛΙΑ","FIR HONEY","#d9a24a","#7a4a12"),notes:"Ανοιχτόχρωμο με μαργαριταρένια λάμψη, βελούδινο και λίγο γλυκό. Δεν κρυσταλλώνει.",in:40,sw:45,pair:"<b>Ταιριάζει:</b> στο ψωμί, στο γάλα, σε παιδιά, σε γλυκά",s:[["450 g",11.9],["950 g",22.5]]},
+ {n:"Θυμάρι",sub:"Θυμαρίσιο μέλι",img:"img/thyme-jar.webp",notes:"Έντονο άρωμα θυμαριού, πικάντικο φινίρισμα. Το κλασικό ελληνικό μέλι από τους λόφους της Αργολίδας.",in:85,sw:70,pair:"<b>Ταιριάζει:</b> γιαούρτι, τσάι του βουνού, κεφαλοτύρι, γραβιέρα",s:[["450 g",12.9],["950 g",24.5]]}
+];
+const box=document.getElementById("prods");
+P.forEach(p=>{
+  p.sel=0;const el=document.createElement("article");el.className="card";
+  el.innerHTML=`<div class="pic">${p.tag?`<span class="tag">${p.tag}</span>`:""}${p.img?`<img src="${p.img}" alt="Βάζο ${p.n} Τροφός Διός" width="520" height="723" loading="lazy">`:p.svg}</div>
+  <div class="body"><span class="sub">${p.sub}</span><h3>${p.n}</h3><p class="notes">${p.notes}</p>
+  <div class="meter">Ένταση <i style="--v:${p.in}%"></i></div><div class="meter">Γλύκα <i style="--v:${p.sw}%"></i></div>
+  <p class="pair">${p.pair}</p>
+  <div class="sizes" role="group" aria-label="Μέγεθος">${p.s.map((s,j)=>`<button aria-pressed="${j===0}" data-j="${j}">${s[0]}</button>`).join("")}</div>
+  <div class="buy"><span class="price"><span class="pv"></span><small class="pk"></small></span><button class="add">Στο καλάθι</button></div></div>`;
+  const upd=()=>{const s=p.s[p.sel];el.querySelector(".pv").textContent=fmt(s[1]);el.querySelector(".pk").textContent=fmt(s[1]/parseInt(s[0])*1000)+" / κιλό"};upd();
+  el.querySelectorAll(".sizes button").forEach(b=>b.onclick=()=>{p.sel=+b.dataset.j;el.querySelectorAll(".sizes button").forEach(x=>x.setAttribute("aria-pressed",x===b));upd()});
+  el.querySelector(".add").onclick=()=>add(p.n+" "+p.s[p.sel][0],p.s[p.sel][1]);
+  box.appendChild(el);
+});
+
+const B={
+ "ΤΔ-ΕΛ-0826":{h:"Έλατο Βανίλια",d:"Αύγουστος 2026",a:"Ελατοδάσος, ορεινή Πελοπόννησος",k:"Όνομα μελισσοκόμου",j:"Παρτίδα 480 βάζων",lab:"Μέλι μελιτώματος ελάτης · Υγρασία 15,6%"},
+ "ΤΔ-ΘΥ-0726":{h:"Θυμάρι",d:"Ιούλιος 2026",a:"Θυμαρότοποι Αργολίδας",k:"Όνομα μελισσοκόμου",j:"Παρτίδα 520 βάζων",lab:"Γύρη θυμαριού 22% · Υγρασία 16,2%"}
+};
+const pp=document.getElementById("passport");
+function show(code){
+  code=(code||"").trim().toUpperCase();const b=B[code];pp.classList.toggle("err",!b);
+  if(!b){pp.innerHTML=`<div class="head"><div><span class="eyebrow">Δεν βρέθηκε</span><h3>Έλεγξε τον κωδικό</h3></div></div><p style="color:var(--muted)">Ο κωδικός είναι στο κάτω μέρος της ετικέτας και μοιάζει με «ΤΔ-ΕΛ-0826». Αν δεν βρίσκεται, γράψε μας και το ελέγχουμε αμέσως.</p>`;return}
+  pp.innerHTML=`<div class="head"><div><span class="eyebrow">Ταυτότητα βάζου</span><h3>${b.h}</h3></div><span class="code">${code}</span></div>
+  <div class="pp-rows"><div><span>Τρύγος</span>${b.d}</div><div><span>Περιοχή</span>${b.a}</div><div><span>Τρύγησε</span>${b.k}</div><div><span>Παρτίδα</span>${b.j}</div></div>
+  <div class="pp-lab"><span>${b.lab}</span><a href="#" data-pdf>Ανάλυση (PDF)</a></div>`;
+  pp.querySelector("[data-pdf]").onclick=e=>{e.preventDefault();toast("Εδώ ανοίγει το PDF της ανάλυσης")};
+}
+show("ΤΔ-ΕΛ-0826");
+document.getElementById("lookup").onsubmit=e=>{e.preventDefault();show(document.getElementById("code").value)};
+document.querySelectorAll(".hint button").forEach(b=>b.onclick=()=>{document.getElementById("code").value=b.dataset.c;show(b.dataset.c)});
+
+const cart=[],FREE=40;
+function add(n,v){const f=cart.find(c=>c.n===n);f?f.q++:cart.push({n,v,q:1});render();toast("Μπήκε στο καλάθι: "+n)}
+document.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{const [n,v]=b.dataset.add.split("|");add(n,+v)});
+function render(){
+  const q=cart.reduce((a,c)=>a+c.q,0),t=cart.reduce((a,c)=>a+c.q*c.v,0);
+  document.getElementById("count").textContent=q;document.getElementById("total").textContent=fmt(t);
+  document.getElementById("items").innerHTML=cart.length?cart.map(c=>`<div class="it"><span>${c.n}<small>${c.q} × ${fmt(c.v)}</small></span><b>${fmt(c.q*c.v)}</b></div>`).join(""):`<p class="empty">Το καλάθι σου είναι άδειο.</p>`;
+  const left=Math.max(0,FREE-t);
+  document.getElementById("shipTxt").textContent=left?`Λείπουν ${fmt(left)} για δωρεάν αποστολή`:"Έχεις δωρεάν αποστολή";
+  document.getElementById("shipBar").style.width=Math.min(100,t/FREE*100)+"%";
+  document.getElementById("stickyTxt").textContent=`${q} ${q===1?"προϊόν":"προϊόντα"} · ${fmt(t)}`;
+  document.getElementById("sticky").classList.toggle("show",q>0&&innerWidth<900);
+}
+const dr=document.getElementById("drawer");
+const open=()=>{dr.classList.add("open");dr.setAttribute("aria-hidden","false")},close=()=>{dr.classList.remove("open");dr.setAttribute("aria-hidden","true")};
+document.getElementById("openCart").onclick=open;document.getElementById("stickyBtn").onclick=open;
+dr.querySelectorAll("[data-close]").forEach(x=>x.onclick=close);addEventListener("keydown",e=>e.key==="Escape"&&close());
+document.getElementById("req").onsubmit=e=>{e.preventDefault();toast("Ευχαριστούμε! Θα σας στείλουμε τιμοκατάλογο σε μία εργάσιμη.");e.target.reset()};
+document.getElementById("nl").onsubmit=e=>{e.preventDefault();toast("Ευχαριστούμε! Θα σου γράψουμε στον επόμενο τρύγο.");e.target.reset()};
+let tt;function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),2400)}
+render();addEventListener("resize",render);
+</script>
+</body>
+</html>
