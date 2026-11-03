@@ -117,15 +117,26 @@ nav.main a{color:#D9DCE0;text-decoration:none;font-weight:500}
 
 /* gallery */
 .works{background:var(--ground)}
-.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;white-space:nowrap}
+@media (min-width:1100px){.filters{flex-wrap:wrap;overflow:visible}}
 .filters button{min-height:44px;padding:0 16px;border:2px solid var(--line);background:transparent;color:var(--ink);font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}
 .filters button.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .filters button .ct{font-weight:500;color:var(--muted);margin-left:4px}
 .filters button.on .ct{color:var(--soft)}
-.gal{columns:2 160px;column-gap:10px;margin-top:22px}
-.gal button{display:block;width:100%;margin:0 0 10px;padding:0;border:0;background:var(--steel);cursor:zoom-in;break-inside:avoid;position:relative;overflow:hidden}
-.gal img{width:100%;height:auto}
-.gal button span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:13px;font-weight:600;color:#fff;text-align:left;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))}
+.gal-wrap{position:relative;margin-top:22px}
+.gal{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:10px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.gal button{flex:0 0 78%;max-width:340px;scroll-snap-align:start;padding:0;border:0;background:#fff;cursor:zoom-in;text-align:left;display:flex;flex-direction:column}
+.gal .ph4{aspect-ratio:4/3;overflow:hidden;background:var(--steel)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.gal button:hover img{transform:scale(1.04)}
+.gal button span{display:block;padding:10px 12px 12px;font-size:14px;font-weight:600;color:var(--ink);line-height:1.35}
+.gal-nav{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:14px}
+.gal-nav .count{font-size:14px;color:var(--muted)}
+.gal-nav div{display:flex;gap:8px}
+.gal-nav button{width:48px;height:48px;border:2px solid var(--ink);background:transparent;color:var(--ink);font-size:20px;cursor:pointer}
+.gal-nav button:hover{background:var(--ink);color:#fff}
 .is-hidden{display:none!important}
 
 /* lightbox */
@@ -171,7 +182,7 @@ footer{background:#0E0F11;color:var(--soft)}
 
 @media (min-width:640px){
   .logos{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .gal{columns:3 200px}
+  .gal button{flex-basis:300px}
 }
 @media (min-width:768px){
   .hero h1{font-size:88px}
@@ -197,7 +208,6 @@ footer{background:#0E0F11;color:var(--soft)}
   .eng .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:64px;padding-block:112px}
   .eng h2{font-size:64px}
   .feat{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .gal{columns:4 220px}
   .form-grid{grid-template-columns:1fr 1.4fr;gap:56px}
   .form-sec h2{font-size:72px}
   .fgrid{grid-template-columns:repeat(4,1fr);padding-block:56px}
@@ -337,50 +347,53 @@ footer{background:#0E0F11;color:var(--soft)}
     <div class="filters" role="group" aria-label="Φίλτρο φωτογραφιών" style="margin-top:56px">
       <button type="button" class="on" data-f="all" aria-pressed="true">Όλα<span class="ct"></span></button><button type="button" data-f="pnl" aria-pressed="false">Κτίρια &amp; panel<span class="ct"></span></button><button type="button" data-f="int" aria-pressed="false">Εσωτερικά &amp; γυψοσανίδα<span class="ct"></span></button><button type="button" data-f="met" aria-pressed="false">Σκάλες &amp; σίδηρος<span class="ct"></span></button><button type="button" data-f="gate" aria-pressed="false">Πόρτες &amp; περιφράξεις<span class="ct"></span></button><button type="button" data-f="can" aria-pressed="false">Υπόστεγα<span class="ct"></span></button><button type="button" data-f="biz" aria-pressed="false">Επαγγελματικοί χώροι<span class="ct"></span></button>
     </div>
-    <div class="gal" id="gal">
-      <button type="button" data-c="pnl"><img src="g/pnl_done.jpg" alt="Κατοικία από panel με θέα στη θάλασσα" loading="lazy"><span>Κατοικία από panel με θέα στη θάλασσα</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_roof.jpg" alt="Στέγη από panel τύπου κεραμιδιού" loading="lazy"><span>Στέγη από panel τύπου κεραμιδιού</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_walls.jpg" alt="Τοποθέτηση επένδυσης σε κατοικία panel" loading="lazy"><span>Τοποθέτηση επένδυσης σε κατοικία panel</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_house2.jpg" alt="Κατοικία από panel με στέγαστρο" loading="lazy"><span>Κατοικία από panel με στέγαστρο</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_house3.jpg" alt="Ολοκληρωμένο κτίριο από panel" loading="lazy"><span>Ολοκληρωμένο κτίριο από panel</span></button>
-      <button type="button" data-c="pnl"><img src="g/house_conc.jpg" alt="Νέα κατοικία από σκυρόδεμα" loading="lazy"><span>Νέα κατοικία από σκυρόδεμα</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_wh.jpg" alt="Μεταλλικός σκελετός αποθήκης" loading="lazy"><span>Μεταλλικός σκελετός αποθήκης</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_room.jpg" alt="Βοηθητικός χώρος από panel σε ταράτσα" loading="lazy"><span>Βοηθητικός χώρος από panel σε ταράτσα</span></button>
-      <button type="button" data-c="pnl"><img src="g/pnl_load.jpg" alt="Παραλαβή panel από το εργαστήριο" loading="lazy"><span>Παραλαβή panel από το εργαστήριο</span></button>
-      <button type="button" data-c="int"><img src="g/int_bed.jpg" alt="Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο" loading="lazy"><span>Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο</span></button>
-      <button type="button" data-c="int"><img src="g/int_tv.jpg" alt="Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα" loading="lazy"><span>Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα</span></button>
-      <button type="button" data-c="int"><img src="g/int_beam.jpg" alt="Ψευδοροφή με φωτισμό LED" loading="lazy"><span>Ψευδοροφή με φωτισμό LED</span></button>
-      <button type="button" data-c="int"><img src="g/int_dry1.jpg" alt="Σκελετός ψευδοροφής και χωρισμάτων" loading="lazy"><span>Σκελετός ψευδοροφής και χωρισμάτων</span></button>
-      <button type="button" data-c="int"><img src="g/int_dry2.jpg" alt="Χωρίσματα γυψοσανίδας σε εξέλιξη" loading="lazy"><span>Χωρίσματα γυψοσανίδας σε εξέλιξη</span></button>
-      <button type="button" data-c="int"><img src="g/int_ext.jpg" alt="Προσθήκη χώρου σε κατοικία" loading="lazy"><span>Προσθήκη χώρου σε κατοικία</span></button>
-      <button type="button" data-c="met"><img src="g/met_stair.jpg" alt="Αιωρούμενη μεταλλική σκάλα" loading="lazy"><span>Αιωρούμενη μεταλλική σκάλα</span></button>
-      <button type="button" data-c="met"><img src="g/met_stair2.jpg" alt="Αιωρούμενη σκάλα με ξύλινα πατήματα" loading="lazy"><span>Αιωρούμενη σκάλα με ξύλινα πατήματα</span></button>
-      <button type="button" data-c="met"><img src="g/met_spiral.jpg" alt="Στριφογυριστή μεταλλική σκάλα" loading="lazy"><span>Στριφογυριστή μεταλλική σκάλα</span></button>
-      <button type="button" data-c="met"><img src="g/met_rail.jpg" alt="Διάτρητο κάγκελο laser" loading="lazy"><span>Διάτρητο κάγκελο laser</span></button>
-      <button type="button" data-c="met"><img src="g/met_door.jpg" alt="Μεταλλική πόρτα εισόδου" loading="lazy"><span>Μεταλλική πόρτα εισόδου</span></button>
-      <button type="button" data-c="met"><img src="g/met_loft.jpg" alt="Μεταλλικό πατάρι κρεβατιού" loading="lazy"><span>Μεταλλικό πατάρι κρεβατιού</span></button>
-      <button type="button" data-c="met"><img src="g/met_tvst.jpg" alt="Μεταλλικό έπιπλο με ξύλο" loading="lazy"><span>Μεταλλικό έπιπλο με ξύλο</span></button>
-      <button type="button" data-c="met"><img src="g/met_work.jpg" alt="Κάγκελο στο εργαστήριο, πριν τη βαφή" loading="lazy"><span>Κάγκελο στο εργαστήριο, πριν τη βαφή</span></button>
-      <button type="button" data-c="met"><img src="g/met_truss.jpg" alt="Ζευκτά στεγάστρου" loading="lazy"><span>Ζευκτά στεγάστρου</span></button>
-      <button type="button" data-c="gate"><img src="g/gate_slide.jpg" alt="Συρόμενες αυλόπορτες και υπόστεγο" loading="lazy"><span>Συρόμενες αυλόπορτες και υπόστεγο</span></button>
-      <button type="button" data-c="gate"><img src="g/gate_garage.jpg" alt="Ανοιγόμενη πόρτα γκαράζ" loading="lazy"><span>Ανοιγόμενη πόρτα γκαράζ</span></button>
-      <button type="button" data-c="gate"><img src="g/gate_garage2.jpg" alt="Πόρτα γκαράζ κλειστή" loading="lazy"><span>Πόρτα γκαράζ κλειστή</span></button>
-      <button type="button" data-c="gate"><img src="g/gate_slats.jpg" alt="Αυλόπορτα με οριζόντιες λάμες" loading="lazy"><span>Αυλόπορτα με οριζόντιες λάμες</span></button>
-      <button type="button" data-c="gate"><img src="g/fence.jpg" alt="Μεταλλική περίφραξη" loading="lazy"><span>Μεταλλική περίφραξη</span></button>
-      <button type="button" data-c="can"><img src="g/can_big.jpg" alt="Μεγάλο μεταλλικό στέγαστρο" loading="lazy"><span>Μεγάλο μεταλλικό στέγαστρο</span></button>
-      <button type="button" data-c="can"><img src="g/can_truss.jpg" alt="Υπόστεγο με ζευκτά και panel" loading="lazy"><span>Υπόστεγο με ζευκτά και panel</span></button>
-      <button type="button" data-c="can"><img src="g/can_in.jpg" alt="Στέγαστρο αυλής, από μέσα" loading="lazy"><span>Στέγαστρο αυλής, από μέσα</span></button>
-      <button type="button" data-c="can"><img src="g/can_perg.jpg" alt="Μεταλλική πέργκολα" loading="lazy"><span>Μεταλλική πέργκολα</span></button>
-      <button type="button" data-c="can"><img src="g/can_cafe.jpg" alt="Στέγαστρο επαγγελματικού χώρου" loading="lazy"><span>Στέγαστρο επαγγελματικού χώρου</span></button>
-      <button type="button" data-c="biz"><img src="g/alu_1.jpg" alt="Επένδυση όψης με αλουμίνιο" loading="lazy"><span>Επένδυση όψης με αλουμίνιο</span></button>
-      <button type="button" data-c="biz"><img src="g/alu_2.jpg" alt="Λεπτομέρεια επένδυσης αλουμινίου" loading="lazy"><span>Λεπτομέρεια επένδυσης αλουμινίου</span></button>
-      <button type="button" data-c="biz"><img src="g/rest_front.jpg" alt="Ανακαίνιση πρόσοψης εστιατορίου" loading="lazy"><span>Ανακαίνιση πρόσοψης εστιατορίου</span></button>
-      <button type="button" data-c="biz"><img src="g/yard_1.jpg" alt="Αυλή επαγγελματικού χώρου" loading="lazy"><span>Αυλή επαγγελματικού χώρου</span></button>
-      <button type="button" data-c="biz"><img src="g/yard_2.jpg" alt="Μεταλλική σκάλα και στέγαστρο αυλής" loading="lazy"><span>Μεταλλική σκάλα και στέγαστρο αυλής</span></button>
-      <button type="button" data-c="biz"><img src="g/floyd_in.jpg" alt="Floyd: διάτρητα κάγκελα εξώστη" loading="lazy"><span>Floyd: διάτρητα κάγκελα εξώστη</span></button>
-      <button type="button" data-c="biz"><img src="g/salv_bar.jpg" alt="Salvador: διάτρητο πάνελ πάνω από το bar" loading="lazy"><span>Salvador: διάτρητο πάνελ πάνω από το bar</span></button>
-      <button type="button" data-c="biz"><img src="g/klakaz_frm.jpg" alt="Klakaz: μεταλλικοί σκελετοί" loading="lazy"><span>Klakaz: μεταλλικοί σκελετοί</span></button>
-      <button type="button" data-c="biz"><img src="g/rel_stage.jpg" alt="Release Athens: χώρος σκηνής" loading="lazy"><span>Release Athens: χώρος σκηνής</span></button>
+    <div class="gal-wrap">
+      <div class="gal" id="gal" tabindex="0" aria-label="Φωτογραφίες έργων">
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_done.jpg" alt="Κατοικία από panel με θέα στη θάλασσα" loading="lazy"></div><span>Κατοικία από panel με θέα στη θάλασσα</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_roof.jpg" alt="Στέγη από panel τύπου κεραμιδιού" loading="lazy"></div><span>Στέγη από panel τύπου κεραμιδιού</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_walls.jpg" alt="Τοποθέτηση επένδυσης σε κατοικία panel" loading="lazy"></div><span>Τοποθέτηση επένδυσης σε κατοικία panel</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_house2.jpg" alt="Κατοικία από panel με στέγαστρο" loading="lazy"></div><span>Κατοικία από panel με στέγαστρο</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_house3.jpg" alt="Ολοκληρωμένο κτίριο από panel" loading="lazy"></div><span>Ολοκληρωμένο κτίριο από panel</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/house_conc.jpg" alt="Νέα κατοικία από σκυρόδεμα" loading="lazy"></div><span>Νέα κατοικία από σκυρόδεμα</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_wh.jpg" alt="Μεταλλικός σκελετός αποθήκης" loading="lazy"></div><span>Μεταλλικός σκελετός αποθήκης</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_room.jpg" alt="Βοηθητικός χώρος από panel σε ταράτσα" loading="lazy"></div><span>Βοηθητικός χώρος από panel σε ταράτσα</span></button>
+      <button type="button" data-c="pnl"><div class="ph4"><img src="g/pnl_load.jpg" alt="Παραλαβή panel από το εργαστήριο" loading="lazy"></div><span>Παραλαβή panel από το εργαστήριο</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_bed.jpg" alt="Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο" loading="lazy"></div><span>Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_tv.jpg" alt="Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα" loading="lazy"></div><span>Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_beam.jpg" alt="Ψευδοροφή με φωτισμό LED" loading="lazy"></div><span>Ψευδοροφή με φωτισμό LED</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_dry1.jpg" alt="Σκελετός ψευδοροφής και χωρισμάτων" loading="lazy"></div><span>Σκελετός ψευδοροφής και χωρισμάτων</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_dry2.jpg" alt="Χωρίσματα γυψοσανίδας σε εξέλιξη" loading="lazy"></div><span>Χωρίσματα γυψοσανίδας σε εξέλιξη</span></button>
+      <button type="button" data-c="int"><div class="ph4"><img src="g/int_ext.jpg" alt="Προσθήκη χώρου σε κατοικία" loading="lazy"></div><span>Προσθήκη χώρου σε κατοικία</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_stair.jpg" alt="Αιωρούμενη μεταλλική σκάλα" loading="lazy"></div><span>Αιωρούμενη μεταλλική σκάλα</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_stair2.jpg" alt="Αιωρούμενη σκάλα με ξύλινα πατήματα" loading="lazy"></div><span>Αιωρούμενη σκάλα με ξύλινα πατήματα</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_spiral.jpg" alt="Στριφογυριστή μεταλλική σκάλα" loading="lazy"></div><span>Στριφογυριστή μεταλλική σκάλα</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_rail.jpg" alt="Διάτρητο κάγκελο laser" loading="lazy"></div><span>Διάτρητο κάγκελο laser</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_door.jpg" alt="Μεταλλική πόρτα εισόδου" loading="lazy"></div><span>Μεταλλική πόρτα εισόδου</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_loft.jpg" alt="Μεταλλικό πατάρι κρεβατιού" loading="lazy"></div><span>Μεταλλικό πατάρι κρεβατιού</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_tvst.jpg" alt="Μεταλλικό έπιπλο με ξύλο" loading="lazy"></div><span>Μεταλλικό έπιπλο με ξύλο</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_work.jpg" alt="Κάγκελο στο εργαστήριο, πριν τη βαφή" loading="lazy"></div><span>Κάγκελο στο εργαστήριο, πριν τη βαφή</span></button>
+      <button type="button" data-c="met"><div class="ph4"><img src="g/met_truss.jpg" alt="Ζευκτά στεγάστρου" loading="lazy"></div><span>Ζευκτά στεγάστρου</span></button>
+      <button type="button" data-c="gate"><div class="ph4"><img src="g/gate_slide.jpg" alt="Συρόμενες αυλόπορτες και υπόστεγο" loading="lazy"></div><span>Συρόμενες αυλόπορτες και υπόστεγο</span></button>
+      <button type="button" data-c="gate"><div class="ph4"><img src="g/gate_garage.jpg" alt="Ανοιγόμενη πόρτα γκαράζ" loading="lazy"></div><span>Ανοιγόμενη πόρτα γκαράζ</span></button>
+      <button type="button" data-c="gate"><div class="ph4"><img src="g/gate_garage2.jpg" alt="Πόρτα γκαράζ κλειστή" loading="lazy"></div><span>Πόρτα γκαράζ κλειστή</span></button>
+      <button type="button" data-c="gate"><div class="ph4"><img src="g/gate_slats.jpg" alt="Αυλόπορτα με οριζόντιες λάμες" loading="lazy"></div><span>Αυλόπορτα με οριζόντιες λάμες</span></button>
+      <button type="button" data-c="gate"><div class="ph4"><img src="g/fence.jpg" alt="Μεταλλική περίφραξη" loading="lazy"></div><span>Μεταλλική περίφραξη</span></button>
+      <button type="button" data-c="can"><div class="ph4"><img src="g/can_big.jpg" alt="Μεγάλο μεταλλικό στέγαστρο" loading="lazy"></div><span>Μεγάλο μεταλλικό στέγαστρο</span></button>
+      <button type="button" data-c="can"><div class="ph4"><img src="g/can_truss.jpg" alt="Υπόστεγο με ζευκτά και panel" loading="lazy"></div><span>Υπόστεγο με ζευκτά και panel</span></button>
+      <button type="button" data-c="can"><div class="ph4"><img src="g/can_in.jpg" alt="Στέγαστρο αυλής, από μέσα" loading="lazy"></div><span>Στέγαστρο αυλής, από μέσα</span></button>
+      <button type="button" data-c="can"><div class="ph4"><img src="g/can_perg.jpg" alt="Μεταλλική πέργκολα" loading="lazy"></div><span>Μεταλλική πέργκολα</span></button>
+      <button type="button" data-c="can"><div class="ph4"><img src="g/can_cafe.jpg" alt="Στέγαστρο επαγγελματικού χώρου" loading="lazy"></div><span>Στέγαστρο επαγγελματικού χώρου</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/alu_1.jpg" alt="Επένδυση όψης με αλουμίνιο" loading="lazy"></div><span>Επένδυση όψης με αλουμίνιο</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/alu_2.jpg" alt="Λεπτομέρεια επένδυσης αλουμινίου" loading="lazy"></div><span>Λεπτομέρεια επένδυσης αλουμινίου</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/rest_front.jpg" alt="Ανακαίνιση πρόσοψης εστιατορίου" loading="lazy"></div><span>Ανακαίνιση πρόσοψης εστιατορίου</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/yard_1.jpg" alt="Αυλή επαγγελματικού χώρου" loading="lazy"></div><span>Αυλή επαγγελματικού χώρου</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/yard_2.jpg" alt="Μεταλλική σκάλα και στέγαστρο αυλής" loading="lazy"></div><span>Μεταλλική σκάλα και στέγαστρο αυλής</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/floyd_in.jpg" alt="Floyd: διάτρητα κάγκελα εξώστη" loading="lazy"></div><span>Floyd: διάτρητα κάγκελα εξώστη</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/salv_bar.jpg" alt="Salvador: διάτρητο πάνελ πάνω από το bar" loading="lazy"></div><span>Salvador: διάτρητο πάνελ πάνω από το bar</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/klakaz_frm.jpg" alt="Klakaz: μεταλλικοί σκελετοί" loading="lazy"></div><span>Klakaz: μεταλλικοί σκελετοί</span></button>
+      <button type="button" data-c="biz"><div class="ph4"><img src="g/rel_stage.jpg" alt="Release Athens: χώρος σκηνής" loading="lazy"></div><span>Release Athens: χώρος σκηνής</span></button>
+      </div>
+      <div class="gal-nav"><span class="count" id="galCount"></span><div><button type="button" id="galPrev" aria-label="Προηγούμενες φωτογραφίες">‹</button><button type="button" id="galNext" aria-label="Επόμενες φωτογραφίες">›</button></div></div>
     </div>
   </div>
 </section>
@@ -465,8 +478,16 @@ footer{background:#0E0F11;color:var(--soft)}
   });
   function setFilter(f){
     btns.forEach(function(x){ var on = x.getAttribute('data-f') === f; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    items.forEach(function(it){ it.classList.toggle('is-hidden', !(f === 'all' || it.dataset.c === f)); });
+    var n = 0;
+    items.forEach(function(it){ var show = (f === 'all' || it.dataset.c === f); it.classList.toggle('is-hidden', !show); if (show) n++; });
+    gal.scrollLeft = 0;
+    document.getElementById('galCount').textContent = n + ' φωτογραφίες · σύρετε ή πατήστε τα βελάκια';
   }
+  var gal = document.getElementById('gal');
+  function step(){ var b = items.filter(function(x){ return !x.classList.contains('is-hidden'); })[0]; return b ? (b.offsetWidth + 12) * Math.max(1, Math.floor(gal.clientWidth / (b.offsetWidth + 12))) : 300; }
+  document.getElementById('galPrev').addEventListener('click', function(){ gal.scrollBy({left: -step(), behavior: 'smooth'}); });
+  document.getElementById('galNext').addEventListener('click', function(){ gal.scrollBy({left: step(), behavior: 'smooth'}); });
+  setFilter('all');
   btns.forEach(function(b){ b.addEventListener('click', function(){ setFilter(b.getAttribute('data-f')); }); });
   document.querySelectorAll('[data-go]').forEach(function(a){ a.addEventListener('click', function(){ setFilter(a.getAttribute('data-go')); }); });
 
