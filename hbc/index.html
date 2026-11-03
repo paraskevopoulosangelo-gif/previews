@@ -64,6 +64,11 @@ nav.main a{color:#D9DCE0;text-decoration:none;font-weight:500}
 .logos .lg-dark{background:var(--ink);padding:18px}
 .logos .lg-dark img{max-height:100%;width:auto;object-fit:contain}
 .logos .lg-fill img{width:100%;height:100%;object-fit:cover}
+.logos .lg-wide{grid-column:1 / -1;aspect-ratio:auto;padding:22px}
+.logos .lg-wide img{width:min(260px,80%);height:auto}
+.proj.wide .main{background:var(--ink);display:flex;align-items:center;justify-content:center;aspect-ratio:16/8}
+.proj.wide .main img{width:min(420px,78%);height:auto;object-fit:contain}
+.proj.wide .note{position:absolute;bottom:12px;left:12px;right:12px;font-size:13px;color:var(--soft);border:1px dashed #4A5058;padding:6px 10px}
 
 /* services */
 .svc{display:grid;grid-template-columns:1fr;gap:2px;background:#C9C5BD}
@@ -181,7 +186,8 @@ footer{background:#0E0F11;color:var(--soft)}
 .mbar a.go{background:var(--accent);color:var(--ink);font-weight:700}
 
 @media (min-width:640px){
-  .logos{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .logos{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .logos .lg-wide{grid-column:auto;aspect-ratio:16/9;padding:18px}
   .gal button{flex-basis:300px}
 }
 @media (min-width:768px){
@@ -192,6 +198,7 @@ footer{background:#0E0F11;color:var(--soft)}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .story .tl{grid-template-columns:repeat(3,minmax(0,1fr))}
   .feat{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proj.wide{grid-column:1 / -1}
   form{grid-template-columns:1fr 1fr}
   .full{grid-column:1 / -1}
   .fgrid{grid-template-columns:repeat(2,1fr)}
@@ -207,7 +214,8 @@ footer{background:#0E0F11;color:var(--soft)}
   .svc{grid-template-columns:repeat(3,minmax(0,1fr))}
   .eng .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:64px;padding-block:112px}
   .eng h2{font-size:64px}
-  .feat{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .feat{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .proj.wide{grid-column:span 2}
   .form-grid{grid-template-columns:1fr 1.4fr;gap:56px}
   .form-sec h2{font-size:72px}
   .fgrid{grid-template-columns:repeat(4,1fr);padding-block:56px}
@@ -262,6 +270,7 @@ footer{background:#0E0F11;color:var(--soft)}
       <a class="lg-dark" href="#erga" aria-label="Floyd Live Music Venue, δείτε το έργο"><img src="g/logo_floyd.png" alt="Floyd Live Music Venue"></a>
       <a class="lg-dark" href="#erga" aria-label="Release Athens Festival, δείτε το έργο"><img src="g/logo_release.png" alt="Release Athens Festival"></a>
       <a class="lg-fill" href="#erga" aria-label="Salvador, δείτε το έργο"><img src="g/logo_salvador.jpg" alt="Salvador"></a>
+      <a class="lg-dark lg-wide" href="#erga" aria-label="Penetron, δείτε το έργο"><img src="g/logo_penetron.png" alt="Penetron"></a>
     </div>
   </div>
 </section>
@@ -322,6 +331,10 @@ footer{background:#0E0F11;color:var(--soft)}
     </div>
 
     <div class="feat">
+      <article class="proj wide">
+        <div class="main"><img src="g/logo_penetron.png" alt="Penetron" loading="lazy"><span class="badge">Γραφεία</span><span class="note">Οι φωτογραφίες των γραφείων έρχονται σύντομα</span></div>
+        <div class="body"><h3>Νέα γραφεία Penetron</h3><span class="meta">[ΠΕΡΙΟΧΗ] · [ΕΤΟΣ]</span><p>Κατασκευάσαμε τα νέα γραφεία της Penetron, εταιρείας με συστήματα στεγάνωσης και προστασίας σκυροδέματος. [Τι κάναμε: π.χ. χωρίσματα και ψευδοροφές γυψοσανίδας, μεταλλικές κατασκευές, τ.μ.]</p></div>
+      </article>
       <article class="proj">
         <div class="main"><img src="g/rel_stage.jpg" alt="Η σκηνή του Release Athens Festival" loading="lazy"><span class="badge">Φεστιβάλ</span></div>
         <div class="thumbs"><button type="button" data-lb="rel_truck" aria-label="Μεγέθυνση"><img src="g/rel_truck.jpg" alt="Το φορτηγό της HBC στον χώρο του φεστιβάλ" loading="lazy"></button><button type="button" data-lb="rel_stage" aria-label="Μεγέθυνση"><img src="g/logo_release.png" alt="Λογότυπο Release Athens" loading="lazy" style="object-fit:contain;background:#15171A;padding:14px"></button></div>
