@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HBC Κατασκευές</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700;800&family=Commissioner:wght@400;500;600&display=swap">
+<style>
+/* Single deliberate look: concrete ground, steel/ink bands, one site-yellow accent. Real job photos carry the page. */
+:root{color-scheme:light;--ink:#15171A;--steel:#2B3036;--ground:#E9E7E2;--paper:#F4F2EE;--muted:#4F545A;--line:#A9A59D;--soft:#B9BDC3;--accent:#F2C230;
+  --f-display:'Roboto Condensed','Arial Narrow',sans-serif;--f-body:Commissioner,system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:#1A1C1F;font-family:var(--f-body);font-size:16px;-webkit-text-size-adjust:100%}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.btn{display:inline-block;background:var(--accent);color:var(--ink);text-decoration:none;font-weight:700;padding:16px 24px;border:0;font-size:16px}
+.btn-ghost{display:inline-block;border:2px solid #fff;color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;font-size:16px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.h2{margin:0;font-weight:800;font-size:44px;line-height:1;text-transform:uppercase;color:var(--ink)}
+section{scroll-margin-top:70px}
+.sec{padding-block:80px}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+.sec-head p{margin:0;max-width:480px;font-size:16px;line-height:1.6;color:var(--muted)}
+
+/* header */
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);z-index:25;background:var(--ink)}
+header{position:sticky;position:-webkit-sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ink);color:#fff;border-bottom:1px solid var(--steel)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.logo b{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:14px}
+.logo span{font-family:var(--f-display);font-weight:700;font-size:18px;letter-spacing:1px;text-transform:uppercase}
+nav.main{display:none;gap:26px}
+nav.main a{color:#D9DCE0;text-decoration:none;font-weight:500}
+.hdr .btn{padding:11px 16px;font-size:14px;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;color:#fff;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;background:var(--steel)}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,13,15,.35) 0%,rgba(12,13,15,.85) 78%)}
+.hero .inner{position:relative;width:100%;padding-block:120px 56px}
+.hero .eyebrow{color:var(--accent);display:block;margin-bottom:16px;line-height:1.7}
+.hero h1{margin:0;font-weight:800;font-size:56px;line-height:.92;text-transform:uppercase}
+.hero p{margin:22px 0 0;font-size:18px;line-height:1.55;color:#E3E5E8;max-width:620px}
+.hero .ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.hero .cap{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:14px;font-size:12px;color:#C9CCD0;background:rgba(0,0,0,.45);padding:4px 8px}
+
+/* trust */
+.trust{background:var(--ink);color:#fff}
+.trust .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-block:32px}
+.trust .item{border-left:3px solid var(--accent);padding-left:14px}
+.trust .num{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1.1}
+.trust .lbl{color:var(--soft);font-size:14px;margin-top:4px}
+
+/* clients */
+.clients{background:var(--paper);border-bottom:1px solid #D6D3CC}
+.clients .wrap{padding-block:40px;display:flex;flex-direction:column;gap:20px}
+.clients .eyebrow{color:var(--muted)}
+.logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.logos a{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;max-width:100%;overflow:hidden;text-decoration:none}
+.logos .lg-dark{background:var(--ink);padding:18px}
+.logos .lg-dark img{max-height:100%;width:auto;object-fit:contain}
+.logos .lg-fill img{width:100%;height:100%;object-fit:cover}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr;gap:2px;background:#C9C5BD}
+.svc a{background:var(--paper);text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
+.svc .img{aspect-ratio:16/10;max-width:100%;overflow:hidden}
+.svc .img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.svc a:hover .img img{transform:scale(1.04)}
+.svc .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px}
+.svc .grp{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.svc h3{margin:0;font-weight:700;font-size:24px;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.svc p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+
+/* engineer band */
+.eng{background:var(--ink);color:#fff}
+.eng .wrap{padding-block:80px;display:grid;grid-template-columns:1fr;gap:40px}
+.eng h2{margin:0;font-weight:800;font-size:46px;line-height:.98;text-transform:uppercase}
+.eng h2 em{font-style:normal;color:var(--accent)}
+.eng .lead{margin:18px 0 0;font-size:17px;line-height:1.6;color:var(--soft);max-width:520px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:24px}
+.steps li{border-top:3px solid #3A3F45;padding-top:18px}
+.steps li:last-child{border-top-color:var(--accent)}
+.steps .n{font-family:var(--f-display);font-weight:800;font-size:15px;letter-spacing:2px;color:var(--accent)}
+.steps h3{margin:8px 0 6px;font-size:22px;text-transform:uppercase}
+.steps p{margin:0;font-size:15px;line-height:1.55;color:var(--soft)}
+.steps .who{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#D9DCE0;border:1px solid #3A3F45;padding:4px 8px}
+
+/* build story */
+.story{background:var(--paper)}
+.story .tl{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+.story figure{margin:0;background:#fff}
+.story .fr{aspect-ratio:4/3;max-width:100%;overflow:hidden;position:relative}
+.story .fr img{width:100%;height:100%;object-fit:cover}
+.story .stage{position:absolute;top:12px;left:12px;background:var(--ink);color:#fff;font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:1.5px;padding:5px 10px;text-transform:uppercase}
+.story .stage.done{background:var(--accent);color:var(--ink)}
+.story figcaption{padding:14px 16px 18px;font-size:15px;line-height:1.5;color:#33373C}
+.story figcaption b{display:block;font-family:var(--f-display);font-size:19px;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+
+/* featured projects */
+.feat{display:grid;grid-template-columns:1fr;gap:18px}
+.proj{background:#fff;display:flex;flex-direction:column}
+.proj .main{position:relative;aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.proj .main img{width:100%;height:100%;object-fit:cover}
+.proj .thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;margin-top:2px}
+.proj .thumbs button{aspect-ratio:1/1;overflow:hidden;padding:0;border:0;cursor:zoom-in;background:var(--steel)}
+.proj .thumbs img{width:100%;height:100%;object-fit:cover}
+.proj .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px}
+.proj h3{margin:0;font-weight:800;font-size:26px;text-transform:uppercase}
+.proj .meta{font-size:14px;color:var(--muted)}
+.proj p{margin:4px 0 0;font-size:15px;line-height:1.55;color:#33373C}
+.badge{position:absolute;top:12px;left:12px;background:var(--accent);color:var(--ink);font-weight:700;font-size:12px;padding:4px 10px;text-transform:uppercase;letter-spacing:1px}
+
+/* gallery */
+.works{background:var(--ground)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{min-height:44px;padding:0 16px;border:2px solid var(--line);background:transparent;color:var(--ink);font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}
+.filters button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.filters button .ct{font-weight:500;color:var(--muted);margin-left:4px}
+.filters button.on .ct{color:var(--soft)}
+.gal{columns:2 160px;column-gap:10px;margin-top:22px}
+.gal button{display:block;width:100%;margin:0 0 10px;padding:0;border:0;background:var(--steel);cursor:zoom-in;break-inside:avoid;position:relative;overflow:hidden}
+.gal img{width:100%;height:auto}
+.gal button span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:13px;font-weight:600;color:#fff;text-align:left;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))}
+.is-hidden{display:none!important}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);max-height:92vh;width:auto}
+dialog.lb::backdrop{background:rgba(10,11,12,.92)}
+dialog.lb img{max-width:min(1100px,94vw);max-height:80vh;width:auto;height:auto;margin:0 auto}
+dialog.lb .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#fff;padding-top:10px}
+dialog.lb .bar p{margin:0;font-size:15px}
+dialog.lb .bar div{display:flex;gap:8px}
+dialog.lb button{min-width:44px;min-height:44px;border:1px solid #555;background:#1E2125;color:#fff;font-size:18px;cursor:pointer}
+
+/* form */
+.form-sec{background:var(--ink);color:#fff}
+.form-grid{display:grid;grid-template-columns:1fr;gap:44px}
+.form-sec h2{margin:0 0 20px;font-weight:800;font-size:56px;line-height:.95;text-transform:uppercase}
+.form-sec .lead{margin:0 0 26px;font-size:17px;line-height:1.6;color:var(--soft)}
+.contact{display:flex;flex-direction:column;gap:10px}
+.contact .who{font-family:var(--f-display);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--accent)}
+.contact .row{font-size:20px;font-weight:600}
+.contact .row a{color:#fff;text-decoration:none}
+.contact small{color:var(--soft);font-size:15px}
+form{background:var(--paper);color:var(--ink);padding:26px;display:grid;grid-template-columns:1fr;gap:16px}
+.f label,.f .lbl{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.f input[type=text],.f input[type=tel],.f input[type=date],.f select{width:100%;height:48px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:0 12px;font-size:16px;font-family:inherit;border-radius:0;-webkit-appearance:none;appearance:none}
+.drop{border:2px dashed var(--line);background:#fff;padding:20px;display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;color:#3A3F45}
+.drop svg{flex:none}
+.map{height:180px;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background-color:#D6D3CC;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.05) 0,rgba(0,0,0,.05) 2px,transparent 2px,transparent 14px)}
+.map span{position:absolute;bottom:10px;left:10px;right:10px;background:#fff;font-size:13px;padding:8px 10px;color:#3A3F45}
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5;color:#3A3F45}
+.consent input{width:22px;height:22px;margin:2px 0 0;flex:none}
+.submit{min-height:56px;border:0;background:var(--accent);color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:1px;cursor:pointer}
+.sent{grid-column:1 / -1;background:#fff;border-left:4px solid var(--accent);padding:12px 14px;font-size:15px}
+
+footer{background:#0E0F11;color:var(--soft)}
+.fgrid{display:grid;grid-template-columns:1fr;gap:28px;padding-block:48px 96px;font-size:15px;line-height:1.8}
+.fgrid b{display:block;color:#fff;margin-bottom:4px}
+.fgrid a{color:var(--soft);display:block}
+.fgrid .brand{font-family:var(--f-display);font-size:22px;letter-spacing:1px;text-transform:uppercase}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr 1.4fr;background:var(--ink);border-top:1px solid var(--steel);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.mbar a{color:#fff;text-decoration:none;text-align:center;font-weight:600;font-size:14px;padding:15px 4px}
+.mbar a.go{background:var(--accent);color:var(--ink);font-weight:700}
+
+@media (min-width:640px){
+  .logos{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .gal{columns:3 200px}
+}
+@media (min-width:768px){
+  .hero h1{font-size:88px}
+  .h2{font-size:56px}
+  .trust .grid{grid-template-columns:repeat(4,1fr)}
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .story .tl{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .feat{grid-template-columns:repeat(2,minmax(0,1fr))}
+  form{grid-template-columns:1fr 1fr}
+  .full{grid-column:1 / -1}
+  .fgrid{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1100px){
+  nav.main{display:flex}
+  .hdr{height:76px}
+  .hero{min-height:700px}
+  .hero h1{font-size:118px}
+  .h2{font-size:64px}
+  .sec{padding-block:112px}
+  .sec-head{flex-direction:row;justify-content:space-between;align-items:flex-end}
+  .svc{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .eng .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:64px;padding-block:112px}
+  .eng h2{font-size:64px}
+  .feat{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .gal{columns:4 220px}
+  .form-grid{grid-template-columns:1fr 1.4fr;gap:56px}
+  .form-sec h2{font-size:72px}
+  .fgrid{grid-template-columns:repeat(4,1fr);padding-block:56px}
+  .mbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div lang="el" id="page">
+<header>
+  <div class="wrap hdr">
+    <a class="logo" href="#top"><b>HBC</b><span>HBC Κατασκευές</span></a>
+    <nav class="main" aria-label="Κύριο μενού">
+      <a href="#ypiresies">Υπηρεσίες</a><a href="#adeia">Από την άδεια ως το κλειδί</a><a href="#erga">Έργα</a><a href="#autopsia">Επικοινωνία</a>
+    </nav>
+    <a class="btn" href="#autopsia">Δωρεάν αυτοψία</a>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <img src="g/hero.jpg" alt="Το φορτηγό της HBC μπροστά στη σκηνή του Release Athens Festival">
+  <div class="shade" aria-hidden="true"></div>
+  <div class="wrap inner">
+    <span class="eyebrow">Από το 2009 · Κτίρια · Panel · Σίδηρος · Αλουμίνιο · Γυψοσανίδα</span>
+    <h1>Χτίζουμε<br>για να αντέχει.</h1>
+    <p>Από ένα κάγκελο μέχρι ολόκληρο σπίτι. Δικός μας πολιτικός μηχανικός και δικό μας συνεργείο, από την άδεια μέχρι την παράδοση του κλειδιού.</p>
+    <div class="ctas">
+      <a class="btn" href="#autopsia">Κλείστε δωρεάν αυτοψία →</a>
+      <a class="btn-ghost" href="#erga">Δείτε τα έργα μας</a>
+    </div>
+  </div>
+  <span class="cap">Release Athens Festival</span>
+</section>
+
+<section class="trust" aria-label="Στοιχεία εμπιστοσύνης">
+  <div class="wrap grid">
+    <div class="item"><div class="num">Από το 2009</div><div class="lbl">ενεργή επιχείρηση στο ΓΕΜΗ</div></div>
+    <div class="item"><div class="num">Άδεια → κλειδί</div><div class="lbl">ένας υπεύθυνος για όλο το έργο</div></div>
+    <div class="item"><div class="num">Δικό μας εργαστήριο</div><div class="lbl">τα μεταλλικά φτιάχνονται εδώ</div></div>
+    <div class="item"><div class="num">[Χ] έτη</div><div class="lbl">γραπτή εγγύηση</div></div>
+  </div>
+</section>
+
+<section class="clients" aria-label="Πελάτες">
+  <div class="wrap">
+    <span class="eyebrow">Μας εμπιστεύτηκαν</span>
+    <div class="logos">
+      <a class="lg-fill" href="#erga" aria-label="Klakaz, δείτε το έργο"><img src="g/logo_klakaz.jpg" alt="Klakaz"></a>
+      <a class="lg-dark" href="#erga" aria-label="Floyd Live Music Venue, δείτε το έργο"><img src="g/logo_floyd.png" alt="Floyd Live Music Venue"></a>
+      <a class="lg-dark" href="#erga" aria-label="Release Athens Festival, δείτε το έργο"><img src="g/logo_release.png" alt="Release Athens Festival"></a>
+      <a class="lg-fill" href="#erga" aria-label="Salvador, δείτε το έργο"><img src="g/logo_salvador.jpg" alt="Salvador"></a>
+    </div>
+  </div>
+</section>
+
+<section id="ypiresies" class="wrap sec">
+  <div class="sec-head">
+    <h2 class="h2">Τι φτιάχνουμε</h2>
+    <p>Κάθε υπηρεσία έχει δική της σελίδα με υλικά, φωτογραφίες και συχνές ερωτήσεις. Όλες οι φωτογραφίες είναι από δικά μας έργα.</p>
+  </div>
+  <div class="svc">
+    <a href="#erga" data-go="pnl"><div class="img"><img src="g/pnl_done.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Κτίρια</span><h3>Κτίρια από panel <span aria-hidden="true">↗</span></h3><p>Μεταλλικός σκελετός, θερμομονωτικά panel και στέγη. Κατοικίες, αποθήκες, βοηθητικοί χώροι.</p></div></a>
+    <a href="#erga" data-go="pnl"><div class="img"><img src="g/house_conc.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Κτίρια</span><h3>Νέες κατοικίες <span aria-hidden="true">↗</span></h3><p>Κατασκευή σπιτιών από σκυρόδεμα και σίδερο, από τα θεμέλια ως την παράδοση.</p></div></a>
+    <a href="#erga" data-go="int"><div class="img"><img src="g/int_tv.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Κτίρια</span><h3>Ανακαινίσεις <span aria-hidden="true">↗</span></h3><p>Ολική ή μερική ανακαίνιση κατοικιών και επαγγελματικών χώρων, και προσθήκες χώρων.</p></div></a>
+    <a href="#erga" data-go="int"><div class="img"><img src="g/int_bed.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Εσωτερικά</span><h3>Γυψοσανίδες <span aria-hidden="true">↗</span></h3><p>Ψευδοροφές, χωρίσματα, επενδύσεις τζακιού και τηλεόρασης, κρυφός φωτισμός.</p></div></a>
+    <a href="#erga" data-go="met"><div class="img"><img src="g/met_stair.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Μεταλλικά</span><h3>Σιδηροκατασκευές <span aria-hidden="true">↗</span></h3><p>Αιωρούμενες και στριφογυριστές σκάλες, πατάρια, πόρτες ασφαλείας, μεταλλικά έπιπλα.</p></div></a>
+    <a href="#erga" data-go="met"><div class="img"><img src="g/met_rail.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Μεταλλικά</span><h3>Κάγκελα <span aria-hidden="true">↗</span></h3><p>Κάγκελα μπαλκονιών και σκάλας, κλασικά ή με διάτρητο σχέδιο laser.</p></div></a>
+    <a href="#erga" data-go="can"><div class="img"><img src="g/gate_slide.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Μεταλλικά</span><h3>Υπόστεγα &amp; πέργκολες <span aria-hidden="true">↗</span></h3><p>Υπόστεγα αυτοκινήτων με panel, μεγάλα στέγαστρα, πέργκολες.</p></div></a>
+    <a href="#erga" data-go="gate"><div class="img"><img src="g/gate_garage.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Μεταλλικά</span><h3>Περιφράξεις &amp; πόρτες <span aria-hidden="true">↗</span></h3><p>Συρόμενες και ανοιγόμενες αυλόπορτες, πόρτες γκαράζ, περιφράξεις.</p></div></a>
+    <a href="#erga" data-go="biz"><div class="img"><img src="g/alu_1.jpg" alt="" loading="lazy"></div><div class="body"><span class="grp">Μεταλλικά</span><h3>Κατασκευές αλουμινίου <span aria-hidden="true">↗</span></h3><p>Επενδύσεις όψεων, πάνελ και κατασκευές αλουμινίου για καταστήματα και κτίρια.</p></div></a>
+  </div>
+</section>
+
+<section id="adeia" class="eng">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--accent)">Δικός μας πολιτικός μηχανικός</span>
+      <h2 style="margin-top:14px">Από την άδεια<br><em>ως το κλειδί.</em></h2>
+      <p class="lead">Δεν τρέχετε σε μηχανικό, πολεοδομία και συνεργεία. Ο μηχανικός μας βγάζει την άδεια, παρακολουθεί την κατασκευή και υπογράφει την ολοκλήρωση. Έχετε έναν άνθρωπο να ρωτάτε για όλα.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n">Βήμα 1</span><h3>Αυτοψία &amp; προσφορά</h3><p>Ερχόμαστε δωρεάν, μετράμε και σας δίνουμε γραπτή, αναλυτική προσφορά.</p><span class="who">Συνεργείο</span></li>
+      <li><span class="n">Βήμα 2</span><h3>Μελέτη &amp; άδεια</h3><p>Ο μηχανικός μας ετοιμάζει τη μελέτη και αναλαμβάνει την άδεια ή τη γνωστοποίηση εργασιών.</p><span class="who">Πολιτικός μηχανικός</span></li>
+      <li><span class="n">Βήμα 3</span><h3>Κατασκευή</h3><p>Σκυρόδεμα, σίδερο, panel, γυψοσανίδα. Τα μεταλλικά φτιάχνονται στο εργαστήριό μας.</p><span class="who">Συνεργείο + μηχανικός</span></li>
+      <li><span class="n">Βήμα 4</span><h3>Παράδοση &amp; εγγύηση</h3><p>Ολοκλήρωση, καθάρισμα χώρου, παράδοση κλειδιού και γραπτή εγγύηση [Χ] ετών.</p><span class="who">Υπογραφή μηχανικού</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="story" aria-labelledby="story-h">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <h2 class="h2" id="story-h">Ένα σπίτι από panel,<br>βήμα βήμα</h2>
+      <p>Κατοικία με θέα στη θάλασσα [ΠΕΡΙΟΧΗ]. Από τη βάση από μπετόν μέχρι τη στέγη, με το δικό μας συνεργείο.</p>
+    </div>
+    <div class="tl">
+      <figure><div class="fr"><img src="g/pnl_frame.jpg" alt="Μεταλλικός σκελετός κατοικίας πάνω σε βάση από μπετόν" loading="lazy"><span class="stage">Σκελετός</span></div><figcaption><b>Μεταλλικός σκελετός</b>Κολώνες, δοκοί και ζευκτά στερεώνονται στη βάση από μπετόν.</figcaption></figure>
+      <figure><div class="fr"><img src="g/pnl_walls.jpg" alt="Τοποθέτηση πλακών επένδυσης στους τοίχους" loading="lazy"><span class="stage">Τοίχοι</span></div><figcaption><b>Πάνελ &amp; επένδυση</b>Θερμομονωτικά panel και πλάκες εξωτερικής επένδυσης.</figcaption></figure>
+      <figure><div class="fr"><img src="g/pnl_done.jpg" alt="Η κατοικία με στέγη από panel κεραμοσκεπής, με θέα στη θάλασσα" loading="lazy"><span class="stage done">Στέγη</span></div><figcaption><b>Στέγη &amp; κλείσιμο</b>Panel τύπου κεραμιδιού στη στέγη. Ακολουθούν κουφώματα και φινίρισμα.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="erga" class="works">
+  <div class="wrap sec">
+    <div class="sec-head">
+      <h2 class="h2">Έργα</h2>
+      <p>Επιλεγμένα έργα και ένα μεγάλο αρχείο από τη δουλειά μας. Πατήστε μια φωτογραφία για να τη δείτε μεγάλη.</p>
+    </div>
+
+    <div class="feat">
+      <article class="proj">
+        <div class="main"><img src="g/rel_stage.jpg" alt="Η σκηνή του Release Athens Festival" loading="lazy"><span class="badge">Φεστιβάλ</span></div>
+        <div class="thumbs"><button type="button" data-lb="rel_truck" aria-label="Μεγέθυνση"><img src="g/rel_truck.jpg" alt="Το φορτηγό της HBC στον χώρο του φεστιβάλ" loading="lazy"></button><button type="button" data-lb="rel_stage" aria-label="Μεγέθυνση"><img src="g/logo_release.png" alt="Λογότυπο Release Athens" loading="lazy" style="object-fit:contain;background:#15171A;padding:14px"></button></div>
+        <div class="body"><h3>Release Athens</h3><span class="meta">[ΧΩΡΟΣ] · [ΕΤΟΣ]</span><p>[Τι κάναμε: π.χ. μεταλλικές κατασκευές, περιφράξεις, σκάλες σκηνής.]</p></div>
+      </article>
+      <article class="proj">
+        <div class="main"><img src="g/floyd_in.jpg" alt="Η αίθουσα του Floyd με τα διάτρητα μεταλλικά κάγκελα" loading="lazy"><span class="badge">Μουσική σκηνή</span></div>
+        <div class="thumbs"><button type="button" data-lb="floyd_hall" aria-label="Μεγέθυνση"><img src="g/floyd_hall.jpg" alt="Η αίθουσα του Floyd φωτισμένη" loading="lazy"></button><button type="button" data-lb="floyd_in" aria-label="Μεγέθυνση"><img src="g/floyd_in.jpg" alt="Κάγκελα εξώστη" loading="lazy" style="object-position:20% 85%"></button></div>
+        <div class="body"><h3>Floyd Live Music</h3><span class="meta">[ΠΕΡΙΟΧΗ] · [ΕΤΟΣ]</span><p>[Τι κάναμε: π.χ. διάτρητα κάγκελα εξώστη και μπαρ, μεταλλικές κατασκευές.]</p></div>
+      </article>
+      <article class="proj">
+        <div class="main"><img src="g/salv_bar.jpg" alt="Το bar του Salvador με το διάτρητο μεταλλικό πάνελ" loading="lazy"><span class="badge">Καφέ · bar</span></div>
+        <div class="thumbs"><button type="button" data-lb="salv_shelf" aria-label="Μεγέθυνση"><img src="g/salv_shelf.jpg" alt="Μεταλλικά ράφια bar" loading="lazy"></button><button type="button" data-lb="salv_terrace" aria-label="Μεγέθυνση"><img src="g/salv_terrace.jpg" alt="Η αυλή με τη μεταλλική περίφραξη" loading="lazy"></button></div>
+        <div class="body"><h3>Salvador</h3><span class="meta">[ΠΕΡΙΟΧΗ] · [ΕΤΟΣ]</span><p>[Τι κάναμε: π.χ. διάτρητο πάνελ οροφής, ράφια bar, περίφραξη αυλής.]</p></div>
+      </article>
+      <article class="proj">
+        <div class="main"><img src="g/klakaz_night.jpg" alt="Η πρόσοψη του Klakaz το βράδυ" loading="lazy"><span class="badge">Club · bar</span></div>
+        <div class="thumbs"><button type="button" data-lb="klakaz_out" aria-label="Μεγέθυνση"><img src="g/klakaz_out.jpg" alt="Η πρόσοψη κατά την κατασκευή" loading="lazy"></button><button type="button" data-lb="klakaz_frm" aria-label="Μεγέθυνση"><img src="g/klakaz_frm.jpg" alt="Μεταλλικοί σκελετοί κουφωμάτων" loading="lazy"></button></div>
+        <div class="body"><h3>Klakaz</h3><span class="meta">Μοναστηράκι · [ΕΤΟΣ]</span><p>[Τι κάναμε: π.χ. μεταλλικοί σκελετοί, γυψοσανίδες, πρόσοψη.]</p></div>
+      </article>
+    </div>
+
+    <div class="filters" role="group" aria-label="Φίλτρο φωτογραφιών" style="margin-top:56px">
+      <button type="button" class="on" data-f="all" aria-pressed="true">Όλα<span class="ct"></span></button><button type="button" data-f="pnl" aria-pressed="false">Κτίρια &amp; panel<span class="ct"></span></button><button type="button" data-f="int" aria-pressed="false">Εσωτερικά &amp; γυψοσανίδα<span class="ct"></span></button><button type="button" data-f="met" aria-pressed="false">Σκάλες &amp; σίδηρος<span class="ct"></span></button><button type="button" data-f="gate" aria-pressed="false">Πόρτες &amp; περιφράξεις<span class="ct"></span></button><button type="button" data-f="can" aria-pressed="false">Υπόστεγα<span class="ct"></span></button><button type="button" data-f="biz" aria-pressed="false">Επαγγελματικοί χώροι<span class="ct"></span></button>
+    </div>
+    <div class="gal" id="gal">
+      <button type="button" data-c="pnl"><img src="g/pnl_done.jpg" alt="Κατοικία από panel με θέα στη θάλασσα" loading="lazy"><span>Κατοικία από panel με θέα στη θάλασσα</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_roof.jpg" alt="Στέγη από panel τύπου κεραμιδιού" loading="lazy"><span>Στέγη από panel τύπου κεραμιδιού</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_walls.jpg" alt="Τοποθέτηση επένδυσης σε κατοικία panel" loading="lazy"><span>Τοποθέτηση επένδυσης σε κατοικία panel</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_house2.jpg" alt="Κατοικία από panel με στέγαστρο" loading="lazy"><span>Κατοικία από panel με στέγαστρο</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_house3.jpg" alt="Ολοκληρωμένο κτίριο από panel" loading="lazy"><span>Ολοκληρωμένο κτίριο από panel</span></button>
+      <button type="button" data-c="pnl"><img src="g/house_conc.jpg" alt="Νέα κατοικία από σκυρόδεμα" loading="lazy"><span>Νέα κατοικία από σκυρόδεμα</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_wh.jpg" alt="Μεταλλικός σκελετός αποθήκης" loading="lazy"><span>Μεταλλικός σκελετός αποθήκης</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_room.jpg" alt="Βοηθητικός χώρος από panel σε ταράτσα" loading="lazy"><span>Βοηθητικός χώρος από panel σε ταράτσα</span></button>
+      <button type="button" data-c="pnl"><img src="g/pnl_load.jpg" alt="Παραλαβή panel από το εργαστήριο" loading="lazy"><span>Παραλαβή panel από το εργαστήριο</span></button>
+      <button type="button" data-c="int"><img src="g/int_bed.jpg" alt="Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο" loading="lazy"><span>Γυψοσανίδα με κρυφό φωτισμό στο υπνοδωμάτιο</span></button>
+      <button type="button" data-c="int"><img src="g/int_tv.jpg" alt="Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα" loading="lazy"><span>Σύνθεση τζακιού και τηλεόρασης από γυψοσανίδα</span></button>
+      <button type="button" data-c="int"><img src="g/int_beam.jpg" alt="Ψευδοροφή με φωτισμό LED" loading="lazy"><span>Ψευδοροφή με φωτισμό LED</span></button>
+      <button type="button" data-c="int"><img src="g/int_dry1.jpg" alt="Σκελετός ψευδοροφής και χωρισμάτων" loading="lazy"><span>Σκελετός ψευδοροφής και χωρισμάτων</span></button>
+      <button type="button" data-c="int"><img src="g/int_dry2.jpg" alt="Χωρίσματα γυψοσανίδας σε εξέλιξη" loading="lazy"><span>Χωρίσματα γυψοσανίδας σε εξέλιξη</span></button>
+      <button type="button" data-c="int"><img src="g/int_ext.jpg" alt="Προσθήκη χώρου σε κατοικία" loading="lazy"><span>Προσθήκη χώρου σε κατοικία</span></button>
+      <button type="button" data-c="met"><img src="g/met_stair.jpg" alt="Αιωρούμενη μεταλλική σκάλα" loading="lazy"><span>Αιωρούμενη μεταλλική σκάλα</span></button>
+      <button type="button" data-c="met"><img src="g/met_stair2.jpg" alt="Αιωρούμενη σκάλα με ξύλινα πατήματα" loading="lazy"><span>Αιωρούμενη σκάλα με ξύλινα πατήματα</span></button>
+      <button type="button" data-c="met"><img src="g/met_spiral.jpg" alt="Στριφογυριστή μεταλλική σκάλα" loading="lazy"><span>Στριφογυριστή μεταλλική σκάλα</span></button>
+      <button type="button" data-c="met"><img src="g/met_rail.jpg" alt="Διάτρητο κάγκελο laser" loading="lazy"><span>Διάτρητο κάγκελο laser</span></button>
+      <button type="button" data-c="met"><img src="g/met_door.jpg" alt="Μεταλλική πόρτα εισόδου" loading="lazy"><span>Μεταλλική πόρτα εισόδου</span></button>
+      <button type="button" data-c="met"><img src="g/met_loft.jpg" alt="Μεταλλικό πατάρι κρεβατιού" loading="lazy"><span>Μεταλλικό πατάρι κρεβατιού</span></button>
+      <button type="button" data-c="met"><img src="g/met_tvst.jpg" alt="Μεταλλικό έπιπλο με ξύλο" loading="lazy"><span>Μεταλλικό έπιπλο με ξύλο</span></button>
+      <button type="button" data-c="met"><img src="g/met_work.jpg" alt="Κάγκελο στο εργαστήριο, πριν τη βαφή" loading="lazy"><span>Κάγκελο στο εργαστήριο, πριν τη βαφή</span></button>
+      <button type="button" data-c="met"><img src="g/met_truss.jpg" alt="Ζευκτά στεγάστρου" loading="lazy"><span>Ζευκτά στεγάστρου</span></button>
+      <button type="button" data-c="gate"><img src="g/gate_slide.jpg" alt="Συρόμενες αυλόπορτες και υπόστεγο" loading="lazy"><span>Συρόμενες αυλόπορτες και υπόστεγο</span></button>
+      <button type="button" data-c="gate"><img src="g/gate_garage.jpg" alt="Ανοιγόμενη πόρτα γκαράζ" loading="lazy"><span>Ανοιγόμενη πόρτα γκαράζ</span></button>
+      <button type="button" data-c="gate"><img src="g/gate_garage2.jpg" alt="Πόρτα γκαράζ κλειστή" loading="lazy"><span>Πόρτα γκαράζ κλειστή</span></button>
+      <button type="button" data-c="gate"><img src="g/gate_slats.jpg" alt="Αυλόπορτα με οριζόντιες λάμες" loading="lazy"><span>Αυλόπορτα με οριζόντιες λάμες</span></button>
+      <button type="button" data-c="gate"><img src="g/fence.jpg" alt="Μεταλλική περίφραξη" loading="lazy"><span>Μεταλλική περίφραξη</span></button>
+      <button type="button" data-c="can"><img src="g/can_big.jpg" alt="Μεγάλο μεταλλικό στέγαστρο" loading="lazy"><span>Μεγάλο μεταλλικό στέγαστρο</span></button>
+      <button type="button" data-c="can"><img src="g/can_truss.jpg" alt="Υπόστεγο με ζευκτά και panel" loading="lazy"><span>Υπόστεγο με ζευκτά και panel</span></button>
+      <button type="button" data-c="can"><img src="g/can_in.jpg" alt="Στέγαστρο αυλής, από μέσα" loading="lazy"><span>Στέγαστρο αυλής, από μέσα</span></button>
+      <button type="button" data-c="can"><img src="g/can_perg.jpg" alt="Μεταλλική πέργκολα" loading="lazy"><span>Μεταλλική πέργκολα</span></button>
+      <button type="button" data-c="can"><img src="g/can_cafe.jpg" alt="Στέγαστρο επαγγελματικού χώρου" loading="lazy"><span>Στέγαστρο επαγγελματικού χώρου</span></button>
+      <button type="button" data-c="biz"><img src="g/alu_1.jpg" alt="Επένδυση όψης με αλουμίνιο" loading="lazy"><span>Επένδυση όψης με αλουμίνιο</span></button>
+      <button type="button" data-c="biz"><img src="g/alu_2.jpg" alt="Λεπτομέρεια επένδυσης αλουμινίου" loading="lazy"><span>Λεπτομέρεια επένδυσης αλουμινίου</span></button>
+      <button type="button" data-c="biz"><img src="g/rest_front.jpg" alt="Ανακαίνιση πρόσοψης εστιατορίου" loading="lazy"><span>Ανακαίνιση πρόσοψης εστιατορίου</span></button>
+      <button type="button" data-c="biz"><img src="g/yard_1.jpg" alt="Αυλή επαγγελματικού χώρου" loading="lazy"><span>Αυλή επαγγελματικού χώρου</span></button>
+      <button type="button" data-c="biz"><img src="g/yard_2.jpg" alt="Μεταλλική σκάλα και στέγαστρο αυλής" loading="lazy"><span>Μεταλλική σκάλα και στέγαστρο αυλής</span></button>
+      <button type="button" data-c="biz"><img src="g/floyd_in.jpg" alt="Floyd: διάτρητα κάγκελα εξώστη" loading="lazy"><span>Floyd: διάτρητα κάγκελα εξώστη</span></button>
+      <button type="button" data-c="biz"><img src="g/salv_bar.jpg" alt="Salvador: διάτρητο πάνελ πάνω από το bar" loading="lazy"><span>Salvador: διάτρητο πάνελ πάνω από το bar</span></button>
+      <button type="button" data-c="biz"><img src="g/klakaz_frm.jpg" alt="Klakaz: μεταλλικοί σκελετοί" loading="lazy"><span>Klakaz: μεταλλικοί σκελετοί</span></button>
+      <button type="button" data-c="biz"><img src="g/rel_stage.jpg" alt="Release Athens: χώρος σκηνής" loading="lazy"><span>Release Athens: χώρος σκηνής</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="autopsia" class="form-sec">
+  <div class="wrap sec form-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--accent);display:block;margin-bottom:14px">Χωρίς χρέωση, χωρίς δέσμευση</span>
+      <h2>Κλείστε<br>δωρεάν<br>αυτοψία</h2>
+      <p class="lead">Ανεβάστε μια φωτογραφία του χώρου, ορίστε την τοποθεσία στον χάρτη και διαλέξτε μέρα. Σας καλούμε για επιβεβαίωση.</p>
+      <div class="contact">
+        <span class="who">Ηλίας Βαξιοβάνος</span>
+        <span class="row">Τηλ. <a href="tel:+306978037273">697 80 37 273</a></span>
+        <span class="row">Viber · WhatsApp στο ίδιο νούμερο</span>
+        <small>Περιοχές: [ΠΕΡΙΟΧΕΣ ΕΞΥΠΗΡΕΤΗΣΗΣ]</small>
+      </div>
+    </div>
+    <form id="autopsiaForm" novalidate>
+      <div class="f"><label for="fn">Ονοματεπώνυμο</label><input id="fn" type="text" autocomplete="name"></div>
+      <div class="f"><label for="fp">Τηλέφωνο</label><input id="fp" type="tel" autocomplete="tel"></div>
+      <div class="f full"><label for="fs">Τι χρειάζεστε</label>
+        <select id="fs">
+          <option>Ανακαίνιση κατοικίας ή χώρου</option><option>Νέα κατοικία (σκυρόδεμα &amp; σίδερο)</option><option>Κτίριο από panel</option><option>Άδεια / μελέτη μηχανικού</option><option>Γυψοσανίδες / ψευδοροφές</option><option>Σκάλα / σιδηροκατασκευή</option><option>Κάγκελα</option><option>Υπόστεγο / πέργκολα</option><option>Περίφραξη / αυλόπορτα</option><option>Κατασκευή αλουμινίου</option><option>Κάτι άλλο</option>
+        </select></div>
+      <div class="f full"><span class="lbl">Φωτογραφίες χώρου (έως 5)</span>
+        <label class="drop" for="fph"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg><span id="phLabel">Πατήστε για φωτογραφία ή επιλογή από το κινητό</span></label>
+        <input id="fph" type="file" accept="image/*" multiple style="position:absolute;width:1px;height:1px;opacity:0"></div>
+      <div class="f full"><span class="lbl">Τοποθεσία (πινέζα)</span>
+        <div class="map" role="img" aria-label="Χάρτης για επιλογή τοποθεσίας"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="#15171A"></path><circle cx="12" cy="10" r="2.6" fill="#F4F2EE"></circle></svg><span>Χάρτης: πατήστε στο σημείο ή «Η τοποθεσία μου»</span></div></div>
+      <div class="f"><label for="fd">Μέρα</label><input id="fd" type="date"></div>
+      <div class="f"><label for="ft">Ώρα</label>
+        <select id="ft"><option>08:00 – 10:00</option><option>10:00 – 12:00</option><option>12:00 – 14:00</option><option>14:00 – 16:00</option><option>16:00 – 18:00</option></select></div>
+      <div class="consent full"><input id="fc" type="checkbox"><label for="fc">Συμφωνώ με την πολιτική απορρήτου για την επεξεργασία των στοιχείων μου.</label></div>
+      <button type="submit" class="submit full">Κλείσε την αυτοψία</button>
+      <div class="sent" id="sentMsg" hidden>Δείγμα σελίδας: στο κανονικό site εδώ το αίτημα φτάνει στο email της HBC.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div><b class="brand">HBC Κατασκευές</b>Ηλίας Βαξιοβάνος<br>ΑΦΜ 111584870<br>ΓΕΜΗ 066858203000<br>[ΔΙΕΥΘΥΝΣΗ ΕΡΓΑΣΤΗΡΙΟΥ]</div>
+    <div><b>Κτίρια</b><a href="#ypiresies">Κτίρια από panel</a><a href="#ypiresies">Νέες κατοικίες</a><a href="#ypiresies">Ανακαινίσεις</a><a href="#adeia">Μελέτη &amp; άδειες</a></div>
+    <div><b>Μεταλλικά &amp; εσωτερικά</b><a href="#ypiresies">Σιδηροκατασκευές &amp; σκάλες</a><a href="#ypiresies">Κάγκελα</a><a href="#ypiresies">Υπόστεγα</a><a href="#ypiresies">Περιφράξεις</a><a href="#ypiresies">Αλουμίνιο</a><a href="#ypiresies">Γυψοσανίδες</a></div>
+    <div><b>Επικοινωνία</b>697 80 37 273<br>info@evconstruction.gr<br>Δευ–Παρ [ΩΡΑΡΙΟ]<br>© 2026 HBC Κατασκευές</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+306978037273">Κλήση</a><a href="https://wa.me/306978037273">WhatsApp</a><a class="go" href="#autopsia">Δωρεάν αυτοψία</a>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Φωτογραφία έργου">
+  <img id="lbImg" src="" alt="">
+  <div class="bar"><p id="lbCap"></p><div><button type="button" id="lbPrev" aria-label="Προηγούμενη">‹</button><button type="button" id="lbNext" aria-label="Επόμενη">›</button><button type="button" id="lbClose" aria-label="Κλείσιμο">✕</button></div></div>
+</dialog>
+</div>
+
+<script>
+(function(){
+  /* Greek capitals without accents (τόνοι) */
+  function stripTonos(s){ return s.toUpperCase().normalize('NFD').replace(/́/g,'').normalize('NFC'); }
+  function capsFix(root){
+    var all = root.querySelectorAll('*');
+    for (var i=0;i<all.length;i++){
+      var el = all[i];
+      if (getComputedStyle(el).textTransform !== 'uppercase') continue;
+      var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+      var n; while ((n = w.nextNode())) n.nodeValue = stripTonos(n.nodeValue);
+      el.style.textTransform = 'none';
+    }
+  }
+  capsFix(document.getElementById('page'));
+
+  /* gallery filter */
+  var btns = document.querySelectorAll('.filters button');
+  var items = Array.prototype.slice.call(document.querySelectorAll('#gal button'));
+  btns.forEach(function(b){
+    var f = b.getAttribute('data-f');
+    var n = f === 'all' ? items.length : items.filter(function(it){ return it.dataset.c === f; }).length;
+    b.querySelector('.ct').textContent = ' ' + n;
+  });
+  function setFilter(f){
+    btns.forEach(function(x){ var on = x.getAttribute('data-f') === f; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    items.forEach(function(it){ it.classList.toggle('is-hidden', !(f === 'all' || it.dataset.c === f)); });
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ setFilter(b.getAttribute('data-f')); }); });
+  document.querySelectorAll('[data-go]').forEach(function(a){ a.addEventListener('click', function(){ setFilter(a.getAttribute('data-go')); }); });
+
+  /* lightbox */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  var list = [], idx = 0;
+  function show(i){ idx = (i + list.length) % list.length; var it = list[idx]; var im = it.querySelector('img'); lbImg.src = im.src; lbImg.alt = im.alt; lbCap.textContent = im.alt; }
+  function open(btn, group){ list = group; show(group.indexOf(btn)); if (lb.showModal) lb.showModal(); else lb.setAttribute('open',''); }
+  items.forEach(function(it){ it.addEventListener('click', function(){ open(it, items.filter(function(x){ return !x.classList.contains('is-hidden'); })); }); });
+  document.querySelectorAll('.proj').forEach(function(p){
+    var g = Array.prototype.slice.call(p.querySelectorAll('.thumbs button'));
+    g.forEach(function(b){ b.addEventListener('click', function(){ open(b, g); }); });
+  });
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(idx-1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(idx+1); });
+  document.getElementById('lbClose').addEventListener('click', function(){ lb.close ? lb.close() : lb.removeAttribute('open'); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') show(idx-1); if (e.key === 'ArrowRight') show(idx+1); });
+
+  /* form */
+  var ph = document.getElementById('fph'), phl = document.getElementById('phLabel');
+  ph.addEventListener('change', function(){
+    var n = Math.min(ph.files.length, 5);
+    phl.textContent = n ? n + (n === 1 ? ' φωτογραφία επιλέχθηκε' : ' φωτογραφίες επιλέχθηκαν') : 'Πατήστε για φωτογραφία ή επιλογή από το κινητό';
+  });
+  document.getElementById('autopsiaForm').addEventListener('submit', function(e){ e.preventDefault(); document.getElementById('sentMsg').hidden = false; });
+})();
+</script>
+
+</body>
+</html>
